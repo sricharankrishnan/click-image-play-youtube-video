@@ -1,0 +1,7 @@
+{% assign relBase = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth <= 1 %}{% assign relBase = '..' %}
+{% elsif depth == 2 %}{% assign relBase = '..' %}
+{% elsif depth == 3 %}{% assign relBase = '../..' %}
+{% elsif depth == 4 %}{% assign relBase = '../../..' %}
+{% endif %}

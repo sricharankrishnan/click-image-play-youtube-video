@@ -1,0 +1,92 @@
+$headingFont: 'Montserrat Subrayada', sans-serif;
+$contentFont: 'Montserrat', sans-serif;
+
+$black: #000000;
+$white: #ffffff;
+
+$baseFontSize: 1.5rem;
+$h1Size: 4.0rem;
+$h2Size: 3.5rem;
+$h3Size: 3.0rem;
+$h4Size: 2.5rem;
+$baseFontSize: 1.6rem;
+
+@mixin transition($type, $duration, $style) {
+  transition-property: $type;
+  -moz-transition-property: $type;
+  -webkit-transition-property: $type;
+  -o-transition-property: $type;
+  -ms-transition-property: $type;
+  transition-duration: $duration;
+  -webkit-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-timing-function: $style;
+  -webkit-transition-timing-function: $style;
+  -o-transition-timing-function: $style;
+  -ms-transition-timing-function: $style;
+  -moz-transition-timing-function: $style;
+}
+
+@mixin buttonReset() {
+  cursor: pointer;
+  padding: 0 18px;
+  color: transparent;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-weight: 700;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 44px;
+  display: inline-block;
+}
+
+body {
+  font-family: $contentFont;
+  font-size: $baseFontSize;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+}
+
+h1 {
+  font-size: $h1Size;
+}
+h2 {
+  font-size: $h2Size;
+}
+h3 {
+  font-size: $h3Size;
+}
+h4 {
+  font-size: $h4Size;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.customRow:before, .customRow:after {
+  display: table;
+  content: "";
+}
+
+.customRow:after {
+  clear: both;
+}

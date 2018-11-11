@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.metaDescription }}"/>
+
+    <!--Bootstrap Stylesheet Requirements Starts Here-->
+    <link href="{{ relBase }}/css/bootstrap.min.css" rel="stylesheet">
+		<!--Bootstrap Stylesheet Requirements Ends Here-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--Relbase Url File Details Starts Here-->
+    {% include rel-base.html %}
+    <!--Relbase Url File Details Ends Here-->
+
+    <!--404 Redirection Details Starts Here-->
+    {% if page.url == "/404.html" %}
+      <meta http-equiv="refresh" content="30; url=/">
+    {% endif %}
+    <!--404 Redirection Details Ends Here-->
+    
+    <!--Favicon Details Starts Here-->
+    <link href="{{ page.faviconImage }}" rel="shortcut icon" type="image/png"/>
+    <!--Favicon Details Ends Here-->
+		
+    <!--Stylesheet Requirements Starts Here-->
+    {% if page.bodyClass == "homePage" %}
+      <link href="{{ relBase }}/css/styles.css" rel="stylesheet" type="text/css"/>
+    {% elsif page.bodyClass == "somethingElse" %}
+      <!--Something Else Stylesheet-->
+    {% else %}
+      <!--Some Other CSS File--> 
+    {% endif %}
+		<!--Stylesheet Requirements Ends Here-->
+
+  </head>
+  <body class="{{ page.bodyClass }}">
+		<!--Main Webiste Content Details Starts Here-->
+		<div class="outerBorder" id="outerBorder">
+			{{ content }}
+		</div>
+		<!--Main Website Content Details Ends Here-->
+
+		<!--Javascript Requirements Starts Here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ relBase }}/js/bootstrap.min.js"></script>
+    <script src="{{ relBase }}/js/main.js" type="text/javascript"></script>
+		<!--Javascript Requirements Ends Here-->
+  </body>
+</html>
