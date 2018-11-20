@@ -1,8 +1,11 @@
-$headingFont: 'Montserrat Subrayada', sans-serif;
-$contentFont: 'Montserrat', sans-serif;
+$appFont: 'Noto Sans KR', sans-serif;
 
 $black: #000000;
 $white: #ffffff;
+$default: #bbbbbb;
+$lightGrey: #fafafa;
+$fontGrey: #888888;
+$linkBlue: #228CDB;
 
 $baseFontSize: 1.5rem;
 $h1Size: 4.0rem;
@@ -35,26 +38,27 @@ $baseFontSize: 1.6rem;
   color: transparent;
   background-color: transparent;
   border: 2px solid transparent;
-  font-weight: 700;
   margin-top: 2px;
   margin-bottom: 2px;
   text-transform: uppercase;
   text-align: center;
   line-height: 44px;
   display: inline-block;
+  font-weight: 700;
+  font-size: $baseFontSize/1.5;
 }
 
 body {
-  font-family: $contentFont;
+  font-family: $appFont;
   font-size: $baseFontSize;
+  font-weight: 400;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  color: $black;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $headingFont;
+  font-weight: 700;
 }
 
 h1 {
@@ -74,6 +78,10 @@ div {
   box-sizing: border-box;
 }
 
+a {
+  color: $linkBlue;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -89,4 +97,18 @@ a:hover {
 
 .customRow:after {
   clear: both;
+}
+
+.defaultButton {
+  @include buttonReset();
+}
+.defaultButton.primaryButton {
+  background: $black;
+  border-color: $black;
+  color: $white;
+}
+.defaultButton.secondaryButton {
+  background: $white;
+  color: $black;
+  border-color: $black;
 }

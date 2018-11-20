@@ -3,9 +3,214 @@ layout: default
 title: Jekyll Lava Boiler Plate Project | Download from Github Free
 metaDescription: ------UNDEFINED-------
 bodyClass: homePage
+faviconImage: "./assets/icons/lava-lamp-favicon.png"
 ---
+<div class="jumbotronSection positionRelative" id="homePageJumbotron">
+  <div class="curtain"></div>
+  <div class="posContainer">
+    <div class="textContainer">
+      <h1>Jekyll <br/>Lava <br/>Boiler <br/>Plate</h1>
+      <p>Interested in getting a jump start on your next Jekyll Project? If you are a Developer then this is the place for you.</p>
+      <button class="defaultButton secondaryButton">Get To Know More</button>
+      <button class="defaultButton primaryButton">Proceed for Clone/Download</button>
+    </div>
+  </div>
+  <div class="videoParent hide"></div>
+</div>
 
-<h1>Jekyll Lava Boiler Plate</h1>
-<p>Interested in getting a jump start on your next Jekyll Project? If you are a Developer then this is the place for you.</p>
-<button class="defaultButton primaryButton">Get To Know More</button>
-<button class="defaultButton secondaryButton">Proceed for Clone/Download</button>
+<div class="mainContentParent">
+  <!--Table of Contents Starts Here-->
+  <section class="contentSection">
+    <header>
+      <h2>Table of Contents</h2>
+    </header>
+    <ul class="list-unstyled defaultList tableOfContents">
+      <li><a href="">What and Why Jekyll Lava Boilerplate?</a></li>
+      <li><a href="">How To Install/Download Jekyll Lava Boilerplate?</a></li>
+      <li><a href="">Features. Features. Features.</a></li>
+    </ul>
+  </section>
+  <!--Table of Contents Ends Here-->
+
+  <!--Introduction Details Starts Here-->
+  <section class="contentSection">
+    <header>
+      <h3>Introduction. What and Why Jekyll Lava Boilerplate?</h3>
+    </header>
+    <p>Jekyll Lava Boiler Plate is a small project built to help developers by reducing that extra time in building a Jekyll Project Environment.
+    It comes pre-built with certain features that can be useful for production level sites.</p>
+    <p>This boiler plate project is currently being served with Jekyll Gem 3.6.3. Lets get you started on how you can use this.</p>
+  </section>
+  <!--Introduction Details Ends Here-->
+
+  <!--Installation and Download Starts Here-->
+  <section class="contentSection">
+    <header>
+      <h3>How To Install/Download Jekyll Lava Boilerplate?</h3>
+    </header>
+    <p>Before downloading this boilerplate, make sure that you have ruby and jekyll pre-installed in your system. Here is a link from the Jekyll Source Page itself: <a href="https://jekyllrb.com/docs/installation/" target="_blank">https://jekyllrb.com/docs/installation/</a>.</p>
+    <p>Then, Jekyll Lava Boiler Plate can be downloaded either directly by using the Download Button at the <a href="#" target="_blank">Github Project Repo</a> or you could do a git clone.</p>
+    <div class="terminalCode">
+      git clone https://github.com/sricharankrishnan/jekyll-lava-boilerplate.git [your-project-name]
+    </div>
+  </section>
+  <!--Installation and Download Ends Here-->
+
+  <!--Feature Section Starts Here-->
+  <section class="contentSection">
+    <header>
+      <h3>Features</h3>
+    </header>
+    <p>Jekyll Lava Boiler Plate comes with some simple yet effective features that can assist you in your building process. These features 
+    are based on the documentation from the original <a href="https://jekyllrb.com/" target="_blank">Jekyll Website</a>. The features and ideas involved are:</p>
+    <p class="featureP">
+      <span class="subHeading">Layout Directory (./_layouts):</span>
+      <span class="description">
+        The layouts directory will be the central point from which all necessary details per page will be served from. You can have more than one
+        layout page and this can be changed in the individual page's layout variable.
+      </span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">SEO Tag(s) being served with Page Variables</span>
+      <span class="description">
+        The title tag and meta description tags have their respective content that would be served from a page's title and metaDescription variables.
+        You could go ahead and replicate this style of populating SEO details per page like so.
+      </span>
+      <span class="featureLocation"><span class="innerText">Check: ./_layouts directory</span></span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">relBase Feature - Handling urls for .css/.js files etc..</span>
+      <span class="description">
+        The <u>rel-base.html</u> document is being served from the <b>Includes directory (./_includes)</b>. This is a really cool feature that was picked up from 
+        <a href="https://ricostacruz.com/til/relative-paths-in-jekyll">https://ricostacruz.com/til/relative-paths-in-jekyll</a>. This helps in ensuring that
+        all assets that need to be locally served like .css and .js files are propogated based on the required path.
+      </span>
+      <span class="featureLocation"><span class="innerText">Check: ./_layouts directory</span></span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">
+        404 Page Not Found Handler
+      </span>
+      <span class="description">
+        Need to have a fallback for a Page Not Found (404)? No problem. A conditional if statement detects whether a page is being served with the 404.html and
+        if so, shall automatically refresh to the home page post 30 seconds. You can adjust this redirect timer in the respective meta content value.
+      </span>
+      <span class="featureLocation"><span class="innerText">Check: ./_layouts directory</span></span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">Favicon(s)</span>
+      <span class="description">
+      Favicons, just like the title and meta desciption tags, may be served from the respective page. This style comes in handy if you have special
+      promotions or indiuvdual sport pages. You could decide to just keep one favicon by removing the href details and place your respective
+      favicon url.
+      </span>
+      <span class="featureLocation"><span class="innerText">Check: ./_layouts directory</span></span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">Stylesheets</span>
+      <span class="description">
+      Wondering why I have kept conditional if based rendering for this? Funny right? Not necessarily and here is the reason why. The
+      idea is that every page may not only have its own set of styles but also styles that are commonly applicable. 
+      </span>
+      <span class="description">
+      For example, if you are on home page, your stylesheet draws a font-file style and some common variables with the Sass @import feature. This together with the indvidual styling may 
+      ensure that your page has styles applicable to it only and no other page.
+      </span>
+      <span class="featureLocation">
+        <span class="innerText">Check: ./_layouts directory</span>
+        <span class="innerText">Check: ./_sass directory</span>
+        <span class="innerText">Check: ./css directory</span>
+      </span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">page.bodyClass</span>
+      <span class="description">
+        Is useful for propagating the stylesheet with the conditional rendering and also, placing the required css class value for 
+        a body tag on that page.
+      </span>
+      <span class="featureLocation">
+        <span class="innerText">Check: ./_layouts directory</span>
+        <span class="innerText">Check: ./index.html</span>
+      </span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">Html Element Div.outerBorder and the Curly Braces <br/>content inside it</span>
+      <span class="description">
+      div.outerBorder contains the required code for picking up with content from every page that uses the default layout. Javascript Tags at the end help
+      with the neccessary javascript code placement which you may write depending upon your project requirement.
+      </span>
+      <span class="featureLocation">
+        <span class="innerText">Check: ./_layouts directory</span>
+      </span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">Sass Directory (./_sass):</span>
+      <span class="description">
+      This is the directory from which all imports being made by stylesheets will have details imported from. A useful place for establishing details
+      like Website Fonts, Sass Variables etc.
+      </span>
+
+      <span class="description">
+      Using <b>@import "file-name"</b> will ensure that you get/import the details from the necssary file from this directory. Checkout the ./css/styles.scss
+      file to get an idea of what is being done to achieve this.
+      </span>
+
+      <span class="description">
+      You should not use Front Matter Initialization in files placed in the ./_sass directory. What is a Front Matter? Check out this <a href="https://jekyllrb.com/docs/front-matter/" target="_blank">link</a>
+      </span>
+      <span class="featureLocation">
+        <span class="innerText">Check: ./_sass directory</span>
+        <span class="innerText">Check: ./_css directory</span>
+      </span>
+    </p>
+    <p class="featureP">
+      <span class="subHeading">Includes Directory (./_includes):</span>
+      <span class="description">
+      This directory is used for housing files that could perhaps be served commonly across the entire website. A good place for keep all HTML relevant details for
+      your website Navigation and Footer Sections. 
+      </span>
+      <span class="description">
+      Would recommend checking out <a href="https://jekyllrb.com/docs/includes/" target="_blank">https://jekyllrb.com/docs/includes/</a> for more information on how a includes 
+      file would be placed and imported into your respective web pages.
+      </span>
+    </p>
+    <p>
+      <span class="subHeading">Data Directory (./_data):</span>
+      <span class="description">
+      This directory is useful for placing your custom data that could be served onto your webpage through Liquid Templating. Think about not having to go through heaps of HTML codes but
+      you can make changes to your webpages in your localhost just by accessing your respective data file.
+      </span>
+      <span class="description">
+      You could also use the ./_data Directory for listing out details that could perhaps be placed inside an unordered or ordererd list tag. If you would like to see more examples, check out 
+      <a href="https://jekyllrb.com/docs/datafiles/" target="_blank">https://jekyllrb.com/docs/datafiles/</a> for more information.
+      </span>
+    </p>
+    <p>
+      <span class="subHeading">Minify HTML</span>
+      <span class="description">HTML files can be minified in Jekyll. A file by the name of <b>compress.html</b> is kept in the ./_layouts directory. The required
+      Front Matter is placed at the top of ./_layouts/default.html file. This helps in compressing/minifying the html page being served.
+      </span>
+      <span class="description">
+        During development process, you could remove the top level front matter in your respective layout file(s) and place it back again to compress the final html 
+        file being rendered. Make sure not to delete the compress.html file
+      </span>
+      <span class="description">
+        If you would like to have more information about this plugin, check out <a href="https://alligator.io/jekyll/compress-html/" target="_blank">https://alligator.io/jekyll/compress-html/</a>
+        and <a href="https://github.com/penibelst/jekyll-compress-html" target="_blank">https://github.com/penibelst/jekyll-compress-html</a>.
+      </span>
+      <span class="featureLocation">
+        <span class="innerText">Check: ./_layout directory</span>
+        <span class="innerText">Check: ./_layout/compress.html file</span>
+      </span>
+    </p>
+    <p>
+      <span class="subHeading">Minifed CSS</span>
+      <span class="description">This jekyll build handles the default Sass preprocessor for writing your respective stylesheet details. Necessary configuration is in place.</span>
+      <span class="featureLocation">
+        <span class="innerText">Check: Inspect Browser and check the css file</span>
+        <span class="innerText">Check: ./_config.yml file</span>
+      </span>
+    </p>
+  </section>
+  <!--Feature Section Ends Here-->
+</div>
