@@ -48,7 +48,7 @@ layout: compress
 
     <!--When you are building your website, please ensure to delete this section and 
         activate the bootstrap commented link on top and also, the conditional rendered css file
-        for the page.bodyClass == "homePage"-->
+        for the page.bodyClass == "homePage"
         
         This was done to exclusivly serve this project on the respective github project path-->
     <link href="{{ relBase }}/jekyll-lava-boilerplate/css/bootstrap.min.css" rel="stylesheet">
@@ -65,8 +65,22 @@ layout: compress
 
 		<!--Javascript Requirements Starts Here-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--
+      Actual javascript required file extenions for your development work
     <script src="{{ relBase }}/js/bootstrap.min.js"></script>
     <script src="{{ relBase }}/js/main.js" type="text/javascript"></script>
+    -->
+
+    <!--
+      Please ensure to remove the script tags below. They are being used to exclusively serve js requirements
+      from the github project directory. Otherwise you would face issues during your development process
+
+      Uncomment the script tags and then run localhost with the needed jekyll command
+      Things should be fine then.
+    -->
+    <script src="{{ relBase }}/jekyll-lava-boilerplate/js/bootstrap.min.js"></script>
+    <script src="{{ relBase }}/jekyll-lava-boilerplate/js/main.js" type="text/javascript"></script>
 		<!--Javascript Requirements Ends Here-->
   </body>
 </html>
