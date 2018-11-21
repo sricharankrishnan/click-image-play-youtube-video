@@ -89,6 +89,7 @@
         background: $black;
         color: $white;
         font-size: $baseFontSize/1.3;
+        margin-bottom: 5px;
       }
       h2, h3 {
         font-size: $baseFontSize/1.1;
@@ -119,23 +120,24 @@
           padding-left: 15px;
           display: block;
           margin-top: 5px;
+          margin-bottom: 15px;
         }
         .featureLocation {
-          margin-top: 12px;
           font-size: $baseFontSize/1.5;
           display: block;
-          margin-left: 15px;
-          margin-bottom: 25px;
+          margin: 5px 0 5px 15px;
           .innerText {
             color: $white;
             padding: 5px;
             background: $black;
             border-radius: 3px;
+            margin: 1px 0;
+            display: inline-block;
           }
         }
       }
       p.featureP {
-        margin-top: 30px;
+        margin-bottom: 25px;
       }
       .defaultList {
         margin-bottom: 0;
@@ -149,15 +151,19 @@
           background-size: 15px;
         }
       }
-      .tableOfContents {
-        margin-bottom: 100px;
-      }
     }
     .contentSection:first-child {
       margin-top: 60px;
     }
     .contentSection:last-child {
       margin-bottom: 60px;
+    }
+    .contentSection.toc {
+      border: 1px solid #f1f1f1;
+      border-radius: 5px;
+      padding: 15px;
+      max-width: calc(100% - 30px);
+      margin: 60px auto;
     }
   }
 }
@@ -206,6 +212,11 @@
         -webkit-transform: translate(-50%, -50%);
         width: 100%;
         max-width: 400px;
+      }
+    }
+    .mainContentParent {
+      .contentSection.toc {
+        max-width: 420px;
       }
     }
   }

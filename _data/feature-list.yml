@@ -1,0 +1,84 @@
+- subHeading: Layout Directory (./_layouts)
+  description:
+    - textData: The layouts directory will be the central point from which all necessary details per page will be served from. You can have more than one layout page and this can be changed in the individual page's layout variable.
+
+- subHeading: SEO Tag(s) being served with Page Variables
+  description: 
+    - textData: The title tag and meta description tags have their respective content that would be served from a page's title and metaDescription variables. You could go ahead and replicate this style of populating SEO details per page like so.
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: relBase Feature - Handling urls for .css/.js files etc.. 
+  description: 
+    - textData: The rel-base.html document is being served from the Includes directory (./_includes). This is a really cool feature that was picked up from https://ricostacruz.com/til/relative-paths-in-jekyll. This helps in ensuring that all assets that need to be locally served like .css and .js files are propogated based on the required path.
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: 404 Page Not Found Handler 
+  description: 
+    - textData: Need to have a fallback for a Page Not Found (404)? No problem. A conditional if statement detects whether a page is being served with the 404.html and if so, shall automatically refresh to the home page post 30 seconds. You can adjust this redirect timer in the respective meta content value. 
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: Favicon(s) 
+  description: 
+    - textData: Favicons, just like the title and meta desciption tags, may be served from the respective page. This style comes in handy if you have special promotions or indiuvdual sport pages. You could decide to just keep one favicon by removing the href details and place your respective favicon url. 
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: Stylesheets
+  description: 
+    - textData: Wondering why I have kept conditional if based rendering for this? Funny right? Not necessarily and here is the reason why. The idea is that every page may not only have its own set of styles but also styles that are commonly applicable.
+    - textData: For example, if you are on home page, your stylesheet draws a font-file style and some common variables with the Sass @import feature. This together with the indvidual styling may ensure that your page has styles applicable to it only and no other page.
+  featureList:
+    - featureText: "./_layouts directory"
+    - featureText: "./_sass directory"
+    - featureText: "./css directory"
+
+- subHeading: page.bodyClass
+  description: 
+    - textData: Is useful for propagating the stylesheet with the conditional rendering and also, placing the required css class value for a body tag on that page. 
+  featureList:
+    - featureText: "./_layouts directory"
+    - featureText: "./index.html"
+
+- subHeading: Html Element Div.outerBorder and the Curly Braces content inside it
+  description: 
+    - textData: div.outerBorder contains the required code for picking up with content from every page that uses the default layout. Javascript Tags at the end help with the neccessary javascript code placement which you may write depending upon your project requirement. 
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: Sass Directory (./_sass)
+  description: 
+    - textData: This is the directory from which all imports being made by stylesheets will have details imported from. A useful place for establishing details like Website Fonts, Sass Variables etc.
+    - textData: Using @import "file-name" will ensure that you get/import the details from the necssary file from this directory. Checkout the ./css/styles.scss file to get an idea of what is being done to achieve this.
+    - textData: You should not use Front Matter Initialization in files placed in the ./_sass directory. What is a Front Matter? Check out this <a href="https://jekyllrb.com/docs/front-matter/" target="_blank">link</a>
+  featureList:
+    - featureText: "./_layouts directory"
+    - featureText: "./_css directory"
+
+- subHeading: Includes Directory (./_includes) 
+  description: 
+    - textData: This directory is used for housing files that could perhaps be served commonly across the entire website. A good place for keep all HTML relevant details for your website Navigation and Footer Sections. 
+    - textData: Would recommend checking out <a href="https://jekyllrb.com/docs/includes/" target="_blank">https://jekyllrb.com/docs/includes/</a> for more information on how a includes file would be placed and imported into your respective web pages.
+
+- subHeading: Data Directory (./_data) 
+  description: 
+    - textData: This directory is useful for placing your custom data that could be served onto your webpage through Liquid Templating. Think about not having to go through heaps of HTML codes but you can make changes to your webpages in your localhost just by accessing your respective data file.
+    - textData: You could also use the ./_data Directory for listing out details that could perhaps be placed inside an unordered or ordererd list tag. If you would like to see more examples, check out <a href="https://jekyllrb.com/docs/datafiles/" target="_blank">https://jekyllrb.com/docs/datafiles/</a> for more information.
+
+- subHeading: Minify HTML
+  description: 
+    - textData: HTML files can be minified in Jekyll. A file by the name of <b>compress.html</b> is kept in the ./_layouts directory. The required Front Matter is placed at the top of ./_layouts/default.html file. This helps in compressing/minifying the html page being served.
+    - textData: During development process, you could remove the top level front matter in your respective layout file(s) and place it back again to compress the final html file being rendered. Make sure not to delete the compress.html file
+    - textData: If you would like to have more information about this plugin, check out <a href="https://alligator.io/jekyll/compress-html/" target="_blank">https://alligator.io/jekyll/compress-html/</a> and <a href="https://github.com/penibelst/jekyll-compress-html" target="_blank">https://github.com/penibelst/jekyll-compress-html</a>.
+  featureList:
+    - featureText: "./_layouts directory"
+    - featureText: " ./_layout/compress.html file"
+
+- subHeading: Minifed CSS
+  description: 
+    - textData: This jekyll build handles the default Sass preprocessor for writing your respective stylesheet details. Necessary configuration is in place.
+  featureList:
+    - featureText: "Inspect Browser and check the css file"
+    - featureText: "./_config.yml file"
