@@ -27,9 +27,10 @@ faviconImage: "./assets/icons/lava-lamp-favicon.png"
     <ul class="list-unstyled defaultList tableOfContents">
       <li><a href="#section1" class="tocLink">What and Why Jekyll Lava Boilerplate?</a></li>
       <li><a href="#section2" class="tocLink">How To Install/Download Jekyll Lava Boilerplate?</a></li>
-      <li><a href="#section3" class="tocLink">Features. Features. Features.</a></li>
-      <li><a href="#section4" class="tocLink">Starter JS and SCSS file</a></li>
-      <li><a href="#section5" class="tocLink">Give This A Star and Support.</a></li>
+      <li><a href="#section3" class="tocLink">How To Get Started With This Boilerplate?</a></li>
+      <li><a href="#section4" class="tocLink">Features. Features. Features.</a></li>
+      <li><a href="#section5" class="tocLink">Starter JS and SCSS file</a></li>
+      <li><a href="#section6" class="tocLink">Give This A Star and Support.</a></li>
     </ul>
   </section>
   <!--Table of Contents Ends Here-->
@@ -59,14 +60,73 @@ faviconImage: "./assets/icons/lava-lamp-favicon.png"
     <div class="terminalCode">
       cd ./your-new-jekyll-project-directory 
     </div>
+  </section>
+  <!--Installation and Download Ends Here-->
+
+  <!--Get Started With Lava Plate Boiler Starts Here-->
+  <section class="contentSection" id="section3">
+    <header>
+      <h3>Getting Started with this Boilerplate</h3>
+    </header>
+    <p>Now that you've donwloaded the boilerplate, its time to set things up before we can actually use this. It's really simple. All you have to do is remove a couple of unwanted details and you're good to go.</p>
+    <p>Please note that these details were kept in place to ensure that basic css and js requirements would come about based on this project url bring hosted on github.</p>
+    <p>Open the Layouts Directory in your project folder and open the default.html file with an editor of your choice. In this example, I am using VIM as the text editor.</p>
+    <div class="terminalCode">
+      vim ./_layouts/default.html
+    </div>
+    <p class="pushTop15">At the top of the page, locate the <b>link</b> tag that has the <b>bootstrap.min.css</b> href value. Remove the comments on either side to make this active.</p>
+    <div class="terminalCode">
+      {% raw %}
+      &lt;link href="{{ relBase }}/css/bootstrap.min.css" rel="stylesheet"&gt;
+      {% endraw %}
+    </div>
+    <p class="pushTop15">Next, proceed to the section that has the conditional rendering for stylesheets. Remove the comments for this section and make this stylesheet active as well.</p>
+    <div class="terminalCode">
+      {% raw %}
+      &lt;link href="{{ relBase }}/css/styles.css" rel="stylesheet" type="text/css"/&gt;
+      {% endraw %}
+    </div>
+    <p class="pushTop15">
+      Remove the entire section of large comments below it along with the stylesheets that are serving the github project.
+    </p>
+    <div class="terminalCode">
+      {% raw %}
+      &lt;!--When you are building your website, please ensure to delete this section and activate the bootstrap commented link on top and also, the conditional rendered css file for the page.bodyClass == "homePage" This was done to exclusivly serve this project on the respective github project path--&gt;
+        &lt;link href="../jekyll-lava-boilerplate/css/bootstrap.min.css" rel="stylesheet"&gt;
+        &lt;link href="../jekyll-lava-boilerplate/css/styles.css" rel="stylesheet" type="text/css"/&gt;
+      &lt;!--Removable Stylesheet section ends here--&gt;
+      {% endraw %}
+    </div>
+    <p class="pushTop15">
+      Activate the below scripts to enable working with the local javascript files by uncommenting them.
+    <p>
+    <div class="terminalCode">
+      {% raw %}
+      &lt;script src="{{ relBase }}/js/bootstrap.min.js"&gt;&lt;/script&gt;<br/>
+      &lt;script src="{{ relBase }}/js/main.js" type="text/javascript"&gt;&lt;/script&gt;
+      {% endraw %}
+    </div>
+    <p class="pushTop15">
+      And finally, you would need to remove the unwanted javascript tags that are in place that are exclusively serving this project url.
+    </p>
+    <div class="terminalCode">
+      {% raw %}
+      &lt;!-- Please ensure to remove the script tags below. They are being used to exclusively serve js requirements from the github project directory. Otherwise you would face issues during your development process Uncomment the script tags and then run localhost with the needed jekyll command Things should be fine then. --&gt;
+      &lt;script src="../jekyll-lava-boilerplate/js/bootstrap.min.js"&gt;&lt;/script&gt;
+      &lt;script src="../jekyll-lava-boilerplate/js/main.js" type="text/javascript"&gt;&lt;/script&gt;
+      {% endraw %}
+    </div>
+    <p class="pushTop15">
+      If you have followed the instructions given till this point and have understood then, start running your jekyll server and open localhost:4000 on your browser and things should be just fine. After this, run through the documenation below to get started on how things work and the features available.
+    </p>
     <div class="terminalCode">
       jekyll serve --watch 
     </div>
   </section>
-  <!--Installation and Download Ends Here-->
+  <!--Get Started With Lava Plate Boiler Ends Here-->
 
   <!--Feature Section Starts Here-->
-  <section class="contentSection" id="section3">
+  <section class="contentSection" id="section4">
     <header>
       <h3>Features</h3>
     </header>
@@ -97,7 +157,7 @@ faviconImage: "./assets/icons/lava-lamp-favicon.png"
   <!--Feature Section Ends Here-->
   
   <!--Js and CSS File Available Starts Here-->
-  <section class="contentSection" id="section4">
+  <section class="contentSection" id="section5">
     <header>
       <h3>Starter JS and SCSS file</h3>
     </header>
@@ -107,7 +167,7 @@ faviconImage: "./assets/icons/lava-lamp-favicon.png"
   <!--Js and CSS File Available Ends Here-->
 
   <!--Support This Project Starts Here-->
-  <section class="contentSection" id="section5">
+  <section class="contentSection" id="section6">
     <header>
       <h3>Support This Project With A Star</h3>
     </header>
