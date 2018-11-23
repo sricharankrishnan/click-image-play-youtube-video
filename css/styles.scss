@@ -180,6 +180,16 @@
       max-width: calc(100% - 30px);
       margin: 60px auto;
     }
+    .contentSection.noticeClause {
+      padding: 15px;
+      background: rgba(255, 0, 0, 0.15);
+      border-radius: 5px;
+      max-width: 420px;
+      p {
+        margin-bottom: 0;
+        font-size: $baseFontSize/1.3;
+      }
+    }
   }
 }
 
