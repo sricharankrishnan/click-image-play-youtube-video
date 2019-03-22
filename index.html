@@ -33,7 +33,8 @@ jsfile: "main.js"
       <li><a href="#section3" class="tocLink">How To Get Started With This Boilerplate?</a></li>
       <li><a href="#section4" class="tocLink">Features. Features. Features.</a></li>
       <li><a href="#section5" class="tocLink">Starter JS and SCSS file</a></li>
-      <li><a href="#section6" class="tocLink">Give This A Star and Support.</a></li>
+      <li><a href="#section6" class="tocLink">The Web Font Loader JS File</a></li>
+      <li><a href="#section7" class="tocLink">Give This A Star and Support.</a></li>
     </ul>
   </section>
   <!--Table of Contents Ends Here-->
@@ -71,6 +72,9 @@ jsfile: "main.js"
       cd ./your-new-jekyll-project-directory 
     </div>
     <p>Run the jekyll server and you should be able to see this exact same page on your localhost. If so then your installation can be considered successful.</p>
+    <div class="terminalCode">
+      jekyll serve 
+    </div>
   </section>
   <!--Installation and Download Ends Here-->
 
@@ -79,59 +83,15 @@ jsfile: "main.js"
     <header>
       <h3>Getting Started with this Boilerplate</h3>
     </header>
-    <p>Now that you've donwloaded the boilerplate, its time to set things up before we can actually use this. It's really simple. All you have to do is remove a couple of unwanted details and you're good to go.</p>
-    <p>Please note that these details were kept in place to ensure that basic css and js requirements would come about based on this project url bring hosted on github.</p>
-    <p>Open the Layouts Directory in your project folder and open the default.html file with an editor of your choice. In this example, I am using VIM as the text editor.</p>
+    <p>
+      Understanding this boiler plate is really simple. You would just need to have a basic understanding of certain <em>variables</em> that are used in this boiler plate. Knowledge of jekyll in prior is important though
+      for you to be able to use this boiler plate. If you have downloaded this project and have things running, lets get started.
+    </p>
+    <p>Open the Layouts Directory in your project folder and open the default.html file with an editor of your choice.</p>
+    <p>The features sections that follow describes the various directories and sections in this boiler plate to help you with your development. The layouts directory is a good place to start. If you've seen the
+    documentation at Jekyllrb, then this should be easy to work with.</p>
     <div class="terminalCode">
       vim ./_layouts/default.html
-    </div>
-    <p class="pushTop15">At the top of the page, locate the <b>link</b> tag that has the <b>bootstrap.min.css</b> href value. Remove the comments on either side to make this active.</p>
-    <div class="terminalCode">
-      {% raw %}
-      &lt;link href="{{ relBase }}/css/bootstrap.min.css" rel="stylesheet"&gt;
-      {% endraw %}
-    </div>
-    <p class="pushTop15">Next, proceed to the section that has the conditional rendering for stylesheets. Remove the comments for this section and make this stylesheet active as well.</p>
-    <div class="terminalCode">
-      {% raw %}
-      &lt;link href="{{ relBase }}/css/styles.css" rel="stylesheet" type="text/css"/&gt;
-      {% endraw %}
-    </div>
-    <p class="pushTop15">
-      Remove the entire section of large comments below it along with the stylesheets that are serving the github project.
-    </p>
-    <div class="terminalCode">
-      {% raw %}
-      &lt;!--When you are building your website, please ensure to delete this section and activate the bootstrap commented link on top and also, the conditional rendered css file for the page.bodyClass == "homePage" This was done to exclusivly serve this project on the respective github project path--&gt;
-        &lt;link href="../jekyll-lava-boilerplate/css/bootstrap.min.css" rel="stylesheet"&gt;
-        &lt;link href="../jekyll-lava-boilerplate/css/styles.css" rel="stylesheet" type="text/css"/&gt;
-      &lt;!--Removable Stylesheet section ends here--&gt;
-      {% endraw %}
-    </div>
-    <p class="pushTop15">
-      Activate the below scripts to enable working with the local javascript files by uncommenting them.
-    <p>
-    <div class="terminalCode">
-      {% raw %}
-      &lt;script src="{{ relBase }}/js/bootstrap.min.js"&gt;&lt;/script&gt;<br/>
-      &lt;script src="{{ relBase }}/js/main.js" type="text/javascript"&gt;&lt;/script&gt;
-      {% endraw %}
-    </div>
-    <p class="pushTop15">
-      And finally, you would need to remove the unwanted javascript tags that are in place that are exclusively serving this project url.
-    </p>
-    <div class="terminalCode">
-      {% raw %}
-      &lt;!-- Please ensure to remove the script tags below. They are being used to exclusively serve js requirements from the github project directory. Otherwise you would face issues during your development process Uncomment the script tags and then run localhost with the needed jekyll command Things should be fine then. --&gt;
-      &lt;script src="../jekyll-lava-boilerplate/js/bootstrap.min.js"&gt;&lt;/script&gt;
-      &lt;script src="../jekyll-lava-boilerplate/js/main.js" type="text/javascript"&gt;&lt;/script&gt;
-      {% endraw %}
-    </div>
-    <p class="pushTop15">
-      If you have followed the instructions given till this point and have understood then, start running your jekyll server and open localhost:4000 on your browser and things should be just fine. After this, run through the documenation below to get started on how things work and the features available.
-    </p>
-    <div class="terminalCode">
-      jekyll serve --watch 
     </div>
   </section>
   <!--Get Started With Lava Plate Boiler Ends Here-->
@@ -173,12 +133,23 @@ jsfile: "main.js"
       <h3>Starter JS and SCSS file</h3>
     </header>
     <p>A javascript file and a Sass File is available for you to start coding. Just erase whatever parts you don't want (except the Front Matter in the Scss file) and be on your way</p>
-    <p>The stylesheet is called <b>./css/styles.scss</b> and the javascript file is called <b>./js/main.js</b>.</p>
+    <p>The stylesheet is located at <b>./assets/css/styles.scss</b> and the javascript file is located at <b>./assets/js/main.js</b>.</p>
   </section>
   <!--Js and CSS File Available Ends Here-->
 
-  <!--Support This Project Starts Here-->
+  <!--Web font loader details starts here-->
   <section class="contentSection" id="section6">
+    <header>
+      <h3>Web Font Loader</h3>
+    </header>
+    <p>In the <b>./_layouts/default.html</b> file, you can see a section that has WebFonts.js and this font loader is responsible for loading the required fonts for this Boilerplate Project. If you would like to know
+    how this piece works, do checkout <a href="https://github.com/typekit/webfontloader" target="_blank">this github project</a>.</p>
+    <p>Otherwise, you could use the old fashion way of importing a Google Fonts API into your stylesheet or the HTML file and be on your way.</p>
+  </section>
+  <!--Web font loader details ends here-->
+
+  <!--Support This Project Starts Here-->
+  <section class="contentSection" id="section7">
     <header>
       <h3>Support This Project With A Star</h3>
     </header>

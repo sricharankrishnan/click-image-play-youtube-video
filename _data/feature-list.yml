@@ -28,8 +28,9 @@
 
 - subHeading: Stylesheets
   description: 
-    - textData: Wondering why I have kept conditional if based rendering for this? Funny right? Not necessarily and here is the reason why. The idea is that every page may not only have its own set of styles but also styles that are commonly applicable.
-    - textData: For example, if you are on home page, your stylesheet draws a font-file style and some common variables with the Sass @import feature. This together with the indvidual styling may ensure that your page has styles applicable to it only and no other page.
+    - textData: Stylesheets are served based on the variable value from an individual page, namely the <b><u>'page.stylesheet'</u></b> variable. Place the name of the stylesheet with the '.css' extension (make sure that the css stylesheet is there at ./assets/css/ directory).
+    - textData: Here, stylesheets make imports from the <b><em>variables.scss</em></b>, <b><em>app-header.scss</em></b> and <b><em>app-footer.scss</em></b> files, which are common requirements as far as this project layout is concerned.
+    - textData: Once you have understood how this stylesheet pattern works, you can replicate this pattern build for any other new pages that you may create.
   featureList:
     - featureText: "./_layouts directory"
     - featureText: "./_sass directory"
@@ -37,10 +38,22 @@
 
 - subHeading: page.bodyClass
   description: 
-    - textData: Is useful for propagating the stylesheet with the conditional rendering and also, placing the required css class value for a body tag on that page. 
+    - textData: This variable will inject a specific class name value in the body tag of the html document. You could use this class value as a point of reference for coding your stylesheet. 
   featureList:
     - featureText: "./_layouts directory"
     - featureText: "./index.html"
+
+- subHeading: Header Tag with '{% include app-header.html %}' 
+  description: 
+    - textData: Represents the header section for your web application. The file <b>app-header.html</b> will serve its contents (from the "./_includes" directory) into this section. You can use <b>app-header.html</b> to build for example a common navigation section.
+  featureList:
+    - featureText: "./_layouts directory"
+
+- subHeading: Footer Tag with '{% include app-footer.html %}' 
+  description: 
+    - textData: Represents the footer section for your web application. The file <b>app-footer.html</b> will serve its contents (from the "./_includes" directory) into this section. You can use <b>app-footer.html</b> to build for example a common footer section. 
+  featureList:
+    - featureText: "./_layouts directory"
 
 - subHeading: Html Element Div.outerBorder and the Curly Braces content inside it
   description: 
