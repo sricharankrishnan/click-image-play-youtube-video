@@ -12,7 +12,7 @@ layout: compress
     <meta name="description" content="{{ page.metaDescription }}"/>
 
     <!--Bootstrap Stylesheet Requirements Starts Here-->
-    <!--<link href="{{ relBase }}/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="{{ relBase }}assets/css/bootstrap.min.css" rel="stylesheet">
 		<!--Bootstrap Stylesheet Requirements Ends Here-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,13 +37,7 @@ layout: compress
     <!--Favicon Details Ends Here-->
 		
     <!--Stylesheet Requirements Starts Here-->
-    {% if page.bodyClass == "homePage" %}
-    <!--<link href="{{ relBase }}/css/styles.css" rel="stylesheet" type="text/css"/>-->
-    {% elsif page.bodyClass == "somethingElse" %}
-      <!--Something Else Stylesheet-->
-    {% else %}
-      <!--Some Other CSS File--> 
-    {% endif %}
+    <link href="{{ relBase }}assets/css/{{ page.stylesheet }}" rel="stylesheet" type="text/css"/>
 		<!--Stylesheet Requirements Ends Here-->
 
     <!--When you are building your website, please ensure to delete this section and 
@@ -51,26 +45,55 @@ layout: compress
         for the page.bodyClass == "homePage"
         
         This was done to exclusivly serve this project on the respective github project path-->
+        <!--
     <link href="{{ relBase }}/jekyll-lava-boilerplate/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ relBase }}/jekyll-lava-boilerplate/css/styles.css" rel="stylesheet" type="text/css"/>
+        -->
     <!--Removable Stylesheet section ends here-->
-
   </head>
   <body class="{{ page.bodyClass }}">
+    <!--Website Header Details Starts Here-->
+    <header>
+      {% include app-header.html %}
+    </header>
+    <!--Website Header Details Ends Here-->
+
 		<!--Main Webiste Content Details Starts Here-->
-		<div class="outerBorder" id="outerBorder">
-			{{ content }}
-		</div>
+    <main>
+      <div class="outerBorder" id="outerBorder">
+        {{ content }}
+      </div>
+    </main>
 		<!--Main Website Content Details Ends Here-->
 
-		<!--Javascript Requirements Starts Here-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Website Footer Details Starts Here-->
+    <footer>
+      {% include app-footer.html %}
+    </footer>
+    <!--Website Footer Details Ends Here-->
 
+    <!--Web Font Loader Details Starts Here-->
+    <!--Refer Web Font Loader Github Page @ https://github.com/typekit/webfontloader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      var __thisAppFontSetup = {
+        google: {
+          families: ["Noto Sans KR:300,400,500,700,900"]
+        }
+      };
+      WebFont.load(__thisAppFontSetup);
+    </script>
+    <!--Web Font Loader Details Ends Here-->
+
+		<!--Javascript Requirements Starts Here-->
     <!--
-      Actual javascript required file extenions for your development work
-    <script src="{{ relBase }}/js/bootstrap.min.js"></script>
-    <script src="{{ relBase }}/js/main.js" type="text/javascript"></script>
+      We're making a call to google for the jquery file. Just in case, there is a backup copy of jquery version 3.3.1 
+      saved in ./js/lib-files directory for you!
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ relBase }}assets/js/lib-files/bootstrap.min.js"></script>
+    <script src="{{ relBase }}assets/js/{{ page.jsfile }}" type="text/javascript"></script>
+    <!--Javascript Requirements Ends Here-->
 
     <!--
       Please ensure to remove the script tags below. They are being used to exclusively serve js requirements
@@ -79,8 +102,10 @@ layout: compress
       Uncomment the script tags and then run localhost with the needed jekyll command
       Things should be fine then.
     -->
+    <!--
     <script src="{{ relBase }}/jekyll-lava-boilerplate/js/bootstrap.min.js"></script>
     <script src="{{ relBase }}/jekyll-lava-boilerplate/js/main.js" type="text/javascript"></script>
+    -->
 		<!--Javascript Requirements Ends Here-->
   </body>
 </html>

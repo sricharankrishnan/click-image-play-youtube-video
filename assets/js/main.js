@@ -1,7 +1,5 @@
-(function($websiteRoot) {
-  function homePageInit() {
-    console.log("Hello World from Main.js File");
-  }
+(function(w, d) {
+  var $websiteRoot = $("#outerBorder");
 
   function smoothScroll() {
     var smoothScrollArray = ["#getToKnowMore", ".tocLink"];
@@ -19,10 +17,14 @@
     });
   }
 
-  function centralController() {
-    smoothScroll();
-    homePageInit();
+  function mainInit() {
+    console.log("Hello and Welcome to this Jekyll Boiler Plate.\nThis is only a sample Javascript File to help you get started on your project.\nFeel free to make changes and build your project.\nHave a nice day and Happy Coding!\n----\n[Message from Boiler Plate Admin!]");
   }
 
-  $(document).ready(centralController);
-})($("#outerBorder"));
+  function centralController() {
+    smoothScroll();
+    mainInit();
+  }
+
+  $(d).ready(centralController);
+})(window, document);

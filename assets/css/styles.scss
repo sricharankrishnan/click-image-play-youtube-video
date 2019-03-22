@@ -1,9 +1,15 @@
 ---
 #Front End Matter Initialization - Do Not Delete This
 ---
+/* We are using web font loaders. In case you would like to 
+use the old fashion way of loading fonts with the font url link
+then uncommnent this and the details in ./_sass/font-file.scss
 
 @import "font-file";
+*/
 @import "variables";
+@import "app-header";
+@import "app-footer";
 
 .pushTop15 {
   margin-top: 15px;
@@ -162,7 +168,7 @@
           color: $fontGrey;
           margin-bottom: 5px;
           padding-left: 20px;
-          background: url("../assets/icons/list-bullet-icon.svg") no-repeat 0 5px;
+          background: url("../icons/list-bullet-icon.svg") no-repeat 0 5px;
           background-size: 15px;
         }
       }
@@ -250,7 +256,7 @@
 }
 @media only screen and (min-width: 1200px) {
   .homePage {
-    background: url("../assets/images/banner-bg.png") no-repeat center center;
+    background: url("../images/banner-bg.png") no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     .jumbotronSection {
