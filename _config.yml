@@ -44,3 +44,6 @@ sass:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Handling Permalinks.
+permalink: /:categories/:title/
