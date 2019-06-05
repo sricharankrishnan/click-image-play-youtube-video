@@ -11,10 +11,6 @@ layout: compress
     <title>{{ page.title }}</title>
     <meta name="description" content="{{ page.metaDescription }}"/>
 
-    <!--Bootstrap Stylesheet Requirements Starts Here-->
-    <link href="{{ relBase }}assets/css/bootstrap.min.css" rel="stylesheet">
-		<!--Bootstrap Stylesheet Requirements Ends Here-->
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -78,9 +74,11 @@ layout: compress
     <!--
       We're making a call to google for the jquery file. Just in case, there is a backup copy of jquery version 3.3.1 
       saved in ./js/lib-files directory for you!
+
+      <script src="{{ relBase }}assets/js/lib-files/bootstrap/bootstrap.min.js" type="text/javascript"></script>
     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-    <script src="{{ relBase }}assets/js/lib-files/bootstrap.min.js"></script>
+    <script src="{{ relBase }}assets/js/lib-files/bootstrap/bootstrap.min.js"></script>
     <script src="{{ relBase }}assets/js/{{ page.jsfile }}" type="text/javascript"></script>
     <!--Javascript Requirements Ends Here-->
   </body>

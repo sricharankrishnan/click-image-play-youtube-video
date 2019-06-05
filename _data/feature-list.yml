@@ -1,97 +1,126 @@
-- subHeading: Layout Directory (./_layouts)
-  description:
-    - textData: The layouts directory will be the central point from which all necessary details per page will be served from. You can have more than one layout page and this can be changed in the individual page's layout variable.
-
-- subHeading: SEO Tag(s) being served with Page Variables
-  description: 
-    - textData: The title tag and meta description tags have their respective content that would be served from a page's title and metaDescription variables. You could go ahead and replicate this style of populating SEO details per page like so.
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: relBase Feature - Handling urls for .css/.js files etc.. 
-  description: 
-    - textData: The rel-base.html document is being served from the Includes directory (./_includes). This is a really cool feature that was picked up from https://ricostacruz.com/til/relative-paths-in-jekyll. This helps in ensuring that all assets that need to be locally served like .css and .js files are propogated based on the required path.
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: 404 Page Not Found Handler 
-  description: 
-    - textData: Need to have a fallback for a Page Not Found (404)? No problem. A conditional if statement detects whether a page is being served with the 404.html and if so, shall automatically refresh to the home page post 30 seconds. You can adjust this redirect timer in the respective meta content value. 
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: Favicon(s) 
-  description: 
-    - textData: Favicons, just like the title and meta desciption tags, may be served from the respective page. This style comes in handy if you have special promotions or indiuvdual sport pages. You could decide to just keep one favicon by removing the href details and place your respective favicon url. 
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: Stylesheets
-  description: 
-    - textData: Stylesheets are served based on the variable value from an individual page, namely the <b><u>'page.stylesheet'</u></b> variable. Place the name of the stylesheet with the '.css' extension (make sure that the css stylesheet is there at ./assets/css/ directory).
-    - textData: Here, stylesheets make imports from the <b><em>variables.scss</em></b>, <b><em>app-header.scss</em></b> and <b><em>app-footer.scss</em></b> files, which are common requirements as far as this project layout is concerned.
-    - textData: Once you have understood how this stylesheet pattern works, you can replicate this pattern build for any other new pages that you may create.
-  featureList:
-    - featureText: "./_layouts directory"
-    - featureText: "./_sass directory"
-    - featureText: "./css directory"
-
-- subHeading: page.bodyClass
-  description: 
-    - textData: This variable will inject a specific class name value in the body tag of the html document. You could use this class value as a point of reference for coding your stylesheet. 
-  featureList:
-    - featureText: "./_layouts directory"
-    - featureText: "./index.html"
-
-- subHeading: Header Tag with '{% include app-header.html %}' 
-  description: 
-    - textData: Represents the header section for your web application. The file <b>app-header.html</b> will serve its contents (from the "./_includes" directory) into this section. You can use <b>app-header.html</b> to build for example a common navigation section.
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: Footer Tag with '{% include app-footer.html %}' 
-  description: 
-    - textData: Represents the footer section for your web application. The file <b>app-footer.html</b> will serve its contents (from the "./_includes" directory) into this section. You can use <b>app-footer.html</b> to build for example a common footer section. 
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: Html Element Div.outerBorder and the Curly Braces content inside it
-  description: 
-    - textData: div.outerBorder contains the required code for picking up with content from every page that uses the default layout. Javascript Tags at the end help with the neccessary javascript code placement which you may write depending upon your project requirement. 
-  featureList:
-    - featureText: "./_layouts directory"
-
-- subHeading: Sass Directory (./_sass)
-  description: 
-    - textData: This is the directory from which all imports being made by stylesheets will have details imported from. A useful place for establishing details like Website Fonts, Sass Variables etc.
-    - textData: Using @import "file-name" will ensure that you get/import the details from the necssary file from this directory. Checkout the ./css/styles.scss file to get an idea of what is being done to achieve this.
-    - textData: You should not use Front Matter Initialization in files placed in the ./_sass directory. What is a Front Matter? Check out this <a href="https://jekyllrb.com/docs/front-matter/" target="_blank">link</a>
-  featureList:
-    - featureText: "./_layouts directory"
-    - featureText: "./_css directory"
-
-- subHeading: Includes Directory (./_includes) 
-  description: 
-    - textData: This directory is used for housing files that could perhaps be served commonly across the entire website. A good place for keep all HTML relevant details for your website Navigation and Footer Sections. 
-    - textData: Would recommend checking out <a href="https://jekyllrb.com/docs/includes/" target="_blank">https://jekyllrb.com/docs/includes/</a> for more information on how a includes file would be placed and imported into your respective web pages.
-
-- subHeading: Data Directory (./_data) 
-  description: 
-    - textData: This directory is useful for placing your custom data that could be served onto your webpage through Liquid Templating. Think about not having to go through heaps of HTML codes but you can make changes to your webpages in your localhost just by accessing your respective data file.
-    - textData: You could also use the ./_data Directory for listing out details that could perhaps be placed inside an unordered or ordererd list tag. If you would like to see more examples, check out <a href="https://jekyllrb.com/docs/datafiles/" target="_blank">https://jekyllrb.com/docs/datafiles/</a> for more information.
-
-- subHeading: Minify HTML
-  description: 
-    - textData: HTML files can be minified in Jekyll. A file by the name of <b>compress.html</b> is kept in the ./_layouts directory. The required Front Matter is placed at the top of ./_layouts/default.html file. This helps in compressing/minifying the html page being served.
-    - textData: During development process, you could remove the top level front matter in your respective layout file(s) and place it back again to compress the final html file being rendered. Make sure not to delete the compress.html file
-    - textData: If you would like to have more information about this plugin, check out <a href="https://alligator.io/jekyll/compress-html/" target="_blank">https://alligator.io/jekyll/compress-html/</a> and <a href="https://github.com/penibelst/jekyll-compress-html" target="_blank">https://github.com/penibelst/jekyll-compress-html</a>.
-  featureList:
-    - featureText: "./_layouts directory"
-    - featureText: " ./_layout/compress.html file"
-
-- subHeading: Minifed CSS
-  description: 
-    - textData: This jekyll build handles the default Sass preprocessor for writing your respective stylesheet details. Necessary configuration is in place.
-  featureList:
-    - featureText: "Inspect Browser and check the css file"
-    - featureText: "./_config.yml file"
+[
+  {
+    "subHeading": "<b>assets Directory</b>",
+    "description": [
+      {
+        "textData": "The Assets directory houses all static files that are required for your web application. Here you will find a 
+                    <b>css</b> directory, where you can place the individual pages stylesheet files, <b>icons</b> directory to 
+                    keep any icons required, <b>images</b> for storing your image files and the <b>js</b> directory, 
+                    to keep you web applications javascript files."
+      },
+      {
+        "textData": "If you observe the <b>home-page.scss</b> file, you will see that there are some imports that are being made. You can
+                    follow this pattern for any new page that you are building with a new stylesheet. Please refer to the <b>_sass directory</b>
+                    section for more information about this."
+      },
+      {
+        "textData": "The <b>main.js</b> file in the js directory is the file that is being served from this page. If you understand the way
+                    global variables and page/site property access works in Jekyll, do have a look at the index.html and ./_layouts/default.html
+                    files, you will see how files are being populated for this boiler plate."
+      }
+    ],
+    "featureList": [
+      {"featureText": "Static Files"},
+      {"featureText": "CSS, JS, Images and Icons folders"},
+      {"featureText": "Static Assets"}
+    ]
+  },
+  {
+    "subHeading": "<b>_includes Directory</b>",
+    "description": [
+      {
+        "textData": "The includes directory can be used to place html files that can be used as common partials for your individual pages. Good
+        place to keep your app's Header and Footer files (which is being done here as an example to show you)."
+      },
+      {
+        "textData": "Checkout the _layouts/default.html file to see how this is working. If you have an understanding of Jekyll's documentation for 
+          this at <a href='https://jekyllrb.com/docs/includes/' target='_blank'><b>'Includes'</b></a>, you should be fine with this."
+      }
+    ],
+    "featureList": [
+      {"featureText": "HTML Partial Files"},
+      {"featureText": "Jekyll Feature"},
+    ]
+  },
+  {
+    "subHeading": "<b>_layouts Directory</b>",
+    "description": [
+      {
+        "textData": "Critical piece in this entire Demo build, the Layouts directory houses a <b>default.html</b> file, this is responsible for
+        creating a common layout for any file that you create which will import this layout file. Reading the Jekyll documentation for this is recommended."
+      },
+      {
+        "textData": "You will understand that its possible perhaps to have multiple layout files. If you need more information look at the official 
+        documentation <a href='https://jekyllrb.com/docs/layouts/' target='_blank'>here</a>."
+      }
+    ],
+    "featureList": [
+      {"featureText": "Core Feature"},
+      {"featureText": "Central Feature"},
+      {"featureText": "Jekyll Feature"},
+      {"featureText": "Common HTML File Layout"}
+    ]
+  },
+  {
+    "subHeading": "<b>_sass Directory</b>",
+    "description": [
+      {
+        "textData": "Now this directory is crucial when it comes to importing common stylesheet requirements. There are a couple of things to understand here."
+      },
+      {
+        "textData": "<b>variables.scss</b> has some predefined variables that are imported in certain files. In case you have more Sass variables that you will need 
+        to create, you could choose to place them here with their respective values."
+      },
+      {
+        "textData": "<b>font-file.scss</b> has a link to a Google font for this project. you can choose to import this file incase you would prefer removing the Web Font 
+        Loader from the layouts file. Taking it a step further, choose your required fonts from Google Fonts and then place them here in this file as required."
+      },
+      {
+        "textData": "<b>common.scss</b> is the common stylesheet that houses some styles that could be imported by all files. You can choose to decide which set of styles would 
+        be commonly applicable, place them in this file and then make an import (just like we are doing it for ./assets/css/home-page.scss file)."
+      },
+      {
+        "textData": "<b>bootstrap directory</b> has all the Sass files from Bootstrap 3.x and post installation of some gems, the required files are then imported into the <b>_sass/common.scss</b> 
+        file."
+      },
+      {
+        "textData": "<b>app-header.scss</b> and <b>app-footer.scss</b> files: these files are there for housing the styles applicable for the common Nav bar section and Footer section for your 
+        web application"
+      }
+    ],
+    "featureList": [
+      {"featureText": "Common Sass Import"},
+      {"featureText": "common.scss file"},
+      {"featureText": "Jekyll Feature"},
+      {"featureText": "Font File"},
+      {"featureText": "Boostrap 3.x Files"}
+    ]
+  },
+  {
+    "subHeading": "<b>_data Directory</b>",
+    "description": [
+      {
+        "textData": "You can keep your JSON/YML files in this directory and then , opt to import them into your html pages. This is an interesting feature of Jekyll."
+      },
+      {
+        "textData": "If you would like to know more about this particular feature, then have a look at the official documentation <a href='https://jekyllrb.com/docs/datafiles/' target='_blank'><b>over here</b>.</a>"
+      }
+    ]
+  },
+  {
+    "subHeading": "<b>index.html file</b>",
+    "description": [
+      {
+        "textData": "Go through the Front matter that has been initialized for this file and then have a look at the ./_layouts/default.html file. You will see how both of these files are related to eachother 
+        based on the local page variables placed in the index.html files. While this is only a demo build, you can add more variables depening upon your build requirements. You may choose to follow a similar pattern 
+        for other newly created pages."
+      }
+    ],
+    "featureList": [
+      {"featureText": "Sample File"},
+      {"featureText": "Page Variables"},
+      {"featureText": "Jekyll Feature"},
+      {"featureText": "Link with the _layouts/default.html file"}
+    ]
+  }
+]

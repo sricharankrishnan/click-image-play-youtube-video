@@ -25,3 +25,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# Bootstrap 3 For Sass Installation
+gem "boostrap-sass"
+gem "sassc-rails"

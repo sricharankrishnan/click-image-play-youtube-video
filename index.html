@@ -5,9 +5,10 @@ metaDescription: A really simple project that serves as a boiler plate for devel
 permalink: "/"
 bodyClass: homePage
 faviconImage: "./assets/icons/lava-lamp-favicon.png"
-stylesheet: "styles.css"
+stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
+
 <div class="jumbotronSection positionRelative" id="homePageJumbotron">
   <div class="curtain"></div>
   <div class="posContainer">
@@ -32,20 +33,11 @@ jsfile: "main.js"
       <li><a href="#section2" class="tocLink">How To Install/Download Jekyll Lava Boilerplate?</a></li>
       <li><a href="#section3" class="tocLink">How To Get Started With This Boilerplate?</a></li>
       <li><a href="#section4" class="tocLink">Features. Features. Features.</a></li>
-      <li><a href="#section5" class="tocLink">Starter JS and SCSS file</a></li>
       <li><a href="#section6" class="tocLink">The Web Font Loader JS File</a></li>
       <li><a href="#section7" class="tocLink">Give This A Star and Support.</a></li>
     </ul>
   </section>
   <!--Table of Contents Ends Here-->
-
-  <!--Notice Clause Details Starts Here-->
-  <div class="contentSection noticeClause">
-    <p>There may be a possibility that you would face differences during the build process as a developer. Please be understanding that this could be
-    the cause perhaps due to details like version changes. I'd do my best to help if there is an issue, so please write to <b><em>sricharan.krishnan@gmail.com</em></b>
-    and I would reply to you at the earliest possible.</p>
-  </div>
-  <!--Notice Clause Details Ends Here-->
 
   <!--Introduction Details Starts Here-->
   <section class="contentSection" id="section1">
@@ -88,7 +80,7 @@ jsfile: "main.js"
       <h3>Getting Started with this Boilerplate</h3>
     </header>
     <p>
-      Understanding this boiler plate is really simple. You would just need to have a basic understanding of certain <em>variables</em> that are used in this boiler plate. Knowledge of jekyll in prior is important though
+      Understanding this boiler plate is really simple. There are certain <em>variables</em> that are used in this boiler plate. Knowledge of jekyll in prior is important though
       for you to be able to use this boiler plate. If you have downloaded this project and have things running, lets get started.
     </p>
     <p>Open the Layouts Directory in your project folder and open the default.html file with an editor of your choice.</p>
@@ -103,7 +95,7 @@ jsfile: "main.js"
   <!--Feature Section Starts Here-->
   <section class="contentSection" id="section4">
     <header>
-      <h3>Features</h3>
+      <h3>Important Features</h3>
     </header>
     <p>Jekyll Lava Boiler Plate comes with some simple yet effective features that can assist you in your building process. These features 
     are based on the documentation from the original <a href="https://jekyllrb.com/" target="_blank">Jekyll Website</a>. The features and ideas involved are:</p>
@@ -116,31 +108,21 @@ jsfile: "main.js"
     {% for thisFeature in featureFile %}
     <p class="featureP">
       <span class="subHeading">{{ thisFeature.subHeading }}</span>
-      {% if thisFeature.featureList %}
-        <span class="featureLocation">
-        {% for featureTag in thisFeature.featureList %}
-          <span class="innerText">Check: {{ featureTag.featureText }}</span>
-        {% endfor %}
-        </span>
-      {% endif %}
       {% for thisDescription in thisFeature.description %}
         <span class="description">{{ thisDescription.textData }}</span>
       {% endfor %}
+      {% if thisFeature.featureList %}
+        <span class="featureLocation">
+        {% for featureTag in thisFeature.featureList %}
+          <span class="innerText">{{ featureTag.featureText }}</span>
+        {% endfor %}
+        </span>
+      {% endif %}
     </p>
     {% endfor %}
   </section>
   <!--Feature Section Ends Here-->
   
-  <!--Js and CSS File Available Starts Here-->
-  <section class="contentSection" id="section5">
-    <header>
-      <h3>Starter JS and SCSS file</h3>
-    </header>
-    <p>A javascript file and a Sass File is available for you to start coding. Just erase whatever parts you don't want (except the Front Matter in the Scss file) and be on your way</p>
-    <p>The stylesheet is located at <b>./assets/css/styles.scss</b> and the javascript file is located at <b>./assets/js/main.js</b>.</p>
-  </section>
-  <!--Js and CSS File Available Ends Here-->
-
   <!--Web font loader details starts here-->
   <section class="contentSection" id="section6">
     <header>
