@@ -1,8 +1,51 @@
 (function(w, d) {
   var $websiteRoot = $("#outerBorder");
 
-  function smoothScroll() {
-    var smoothScrollArray = ["#getToKnowMore", ".tocLink"];
+  function initDemoVideos() {
+    var trig1 = $("#demo1"),
+        trig2 = $("#demo2"),
+        trig3 = $("#demo3");
+
+    trig1Id = "#" + trig1.attr("id");
+    trig2Id = "#" + trig2.attr("id");
+    trig3Id = "#" + trig3.attr("id");
+
+    /* Demo 1 Segment */
+    var buildOne = new YoutubeOverlayModule({
+      sourceUrl: trig1.attr("data-videourl"),
+      triggerElement: trig1Id,
+      progressCallback: function(thisResponse) {
+        console.log("Trigger 1 Response");
+        console.log(thisResponse);
+      }
+    });
+    buildOne.activateDeployment();
+
+    /* Demo 2 Segment */
+    var buildTwo = new YoutubeOverlayModule({
+      sourceUrl: trig2.attr("data-videourl"),
+      triggerElement: trig2Id,
+      progressCallback: function(thisResponse) {
+        console.log("Trigger 2 Response");
+        console.log(thisResponse);
+      }
+    });
+    buildOne.activateDeployment();
+
+    /* Demo 3 Segment */
+    var buildThree = new YoutubeOverlayModule({
+      sourceUrl: trig3.attr("data-videourl"),
+      triggerElement: trig3Id,
+      progressCallback: function(thisResponse) {
+        console.log("Trigger 3 Response");
+        console.log(thisResponse);
+      }
+    });
+    buildThree.activateDeployment();
+  }
+
+	function smoothScroll() {
+    var smoothScrollArray = ["#exploreButton"];
     $.each(smoothScrollArray, function(index, element) {
       if($(element).length > 0) {
         $(element).on("click", function(event) {
@@ -17,13 +60,9 @@
     });
   }
 
-  function mainInit() {
-    console.log("Hello and Welcome to this Jekyll Boiler Plate.\nThis is only a sample Javascript File to help you get started on your project.\nFeel free to make changes and build your project.\nHave a nice day and Happy Coding!\n----\n[Message from Boiler Plate Admin!]");
-  }
-
   function centralController() {
-    smoothScroll();
-    mainInit();
+    initDemoVideos();
+		smoothScroll();
   }
 
   $(d).ready(centralController);

@@ -2,10 +2,9 @@ $appFont: 'Noto Sans KR', sans-serif;
 
 $black: #000000;
 $white: #ffffff;
-$default: #bbbbbb;
-$lightGrey: #fafafa;
-$fontGrey: #888888;
+$thisGrey: #888888;
 $linkBlue: #228CDB;
+$orange: #ec5a2e;
 
 $baseFontSize: 1.5rem;
 $h1Size: 4.0rem;
@@ -38,6 +37,7 @@ $baseFontSize: 1.6rem;
   color: transparent;
   background-color: transparent;
   border: 2px solid transparent;
+  border-radius: 3px;
   margin-top: 2px;
   margin-bottom: 2px;
   text-transform: uppercase;

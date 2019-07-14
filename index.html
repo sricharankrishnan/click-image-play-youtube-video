@@ -1,165 +1,146 @@
 ---
 layout: default
-title: Jekyll Lava Boiler Plate Project | Download from Github Free
-metaDescription: A really simple project that serves as a boiler plate for developers building front end websites with Jekyll. Basic documentation available to help understand how this works.
-metaKeywords: "jekyll, jekyll boilerplate, jekyll boilerplate template, jekyll development environment, jekyll lava boilerplate, jekyll lava, jekyll website builder, jekyll website examples, jekyll project, jekyll environment how to"
+title: "Click Image Play Youtube Video - Version 3| Simple Jquery Plugin (Open Source)"
+metaDescription: A Simple Tutorial/Plugin that would help you understand and build UI that plays embed styled youtube videos. Demos included as well.
+metaKeywords: "click image play youtube video, jquery click image play youtube video, jquery click image to play video, click image to play video, jquery plugin for youtube videos, javascript plugin for youtube videos"
 permalink: "/"
 bodyClass: homePage
-faviconImage: "./assets/icons/lava-lamp-favicon.png"
+faviconImage: "./assets/icons/favicon.png"
 stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
-
-<div class="jumbotronSection positionRelative" id="homePageJumbotron">
-  <div class="curtain"></div>
+<!--Jumbotron section starts here-->
+<div class="jumbotronSection positionRelative">
   <div class="posContainer">
-    <div class="textContainer">
-      <h1>Jekyll <br/>Lava <br/>Boiler <br/>Plate</h1>
-      <p>Interested in getting a jump start on your next Jekyll Project? If you are a Developer then this is the place for you.</p>
-      <a class="defaultButton secondaryButton hidden-lg" href="#mainContentParent" id="getToKnowMore">Get To Know More</a>
-      <a class="defaultButton primaryButton" href="https://github.com/sricharankrishnan/jekyll-lava-boilerplate" target="_blank">Proceed To Github Source</a>
-    </div>
+    <h1>Click Image Play Youtube Video - V.3.0</h1>
+    <p>A Jquery/Javascript plugin thats simple to integrate. Use this to play youtube videos in your web app.</p>
+    <a href="#section1" class="defaultButton primaryOrange visible-xs" type="button" id="exploreButton">Get To Know More</a>
   </div>
-  <div class="videoParent hide"></div>
 </div>
+<!--Jumbotron section ends here-->
 
-<div class="mainContentParent" id="mainContentParent">
-  <!--Table of Contents Starts Here-->
-  <section class="contentSection toc">
-    <header>
-      <h2>Table of Contents</h2>
-    </header>
-    <ul class="list-unstyled defaultList tableOfContents">
-      <li><a href="#section1" class="tocLink">What and Why Jekyll Lava Boilerplate?</a></li>
-      <li><a href="#section2" class="tocLink">How To Install/Download Jekyll Lava Boilerplate?</a></li>
-      <li><a href="#section3" class="tocLink">How To Get Started With This Boilerplate?</a></li>
-      <li><a href="#section4" class="tocLink">Features. Features. Features.</a></li>
-      <li><a href="#section6" class="tocLink">The Web Font Loader JS File</a></li>
-      <li><a href="#section7" class="tocLink">Give This A Star and Support.</a></li>
-    </ul>
-  </section>
-  <!--Table of Contents Ends Here-->
-
-  <!--Introduction Details Starts Here-->
-  <section class="contentSection" id="section1">
-    <header>
-      <h3>Introduction. What and Why Jekyll Lava Boilerplate?</h3>
-    </header>
-    <p>Jekyll Lava Boiler Plate is a small project built to help developers by reducing that extra time in building a Jekyll Project Environment.
-    It comes pre-built with certain features that can be useful for production level sites.</p>
-    <p>This boiler plate project is currently being served with <br/><b><em>Jekyll Version 3.8.5</em></b>. Lets get you started on how you can use this.</p>
-  </section>
-  <!--Introduction Details Ends Here-->
-
-  <!--Additional Notes-->
+<!--Main Article and Content Starts Here-->
+<div class="contentParent" id="section1">
+  <!--Intro-->
   <section class="contentSection">
-    <p><strong><u>Side Note Before You Start:</u></strong><br/> 
-    When you do download the boilerplate from the github source, you will see that there are other additional files like README.md, CODE_OF_CONDUCT.md and also a 
-    google html file. These files are not needed as a part of your project build but is being used to as required to either maintain/give information about this 
-    project.</p>
-    <p>You would also need to remove the <strong>Git Remote</strong> attached to this project post the download like so:</p>
-    <div class="terminalCode">
-      git remote -v<br/> 
-      ---------------<br/>
-      origin  git@github.com:sricharankrishnan/jekyll-lava-boilerplate.git (fetch)<br/>
-      origin  git@github.com:sricharankrishnan/jekyll-lava-boilerplate.git (push)
-      <br/><br/>
-      git remote remove origin
-    </div>
+    <h2>About This Plugin</h2>
+    <p>The goal is simple. Integrate some files into your webapp and use simple configuration methods to trigger YouTube Video frames playing its video.</p>
+    <p>Version 2, just like its predecessor, is Open Source and is free to be distributed and used in your projects and app. No strings attached.</p>
   </section>
-  <!--Additional Notes-->
 
-  <!--Installation and Download Starts Here-->
-  <section class="contentSection" id="section2">
-    <header>
-      <h3>How To Install/Download Jekyll Lava Boilerplate?</h3>
-    </header>
-    <p>Before downloading this boilerplate, make sure that you have ruby and jekyll pre-installed in your system. Here is a link from the Jekyll Source Page itself: <a href="https://jekyllrb.com/docs/installation/" target="_blank">https://jekyllrb.com/docs/installation/</a>.</p>
-    <p>Then, Jekyll Lava Boiler Plate can be downloaded either directly by using the Download Button at the <a href="https://github.com/sricharankrishnan/jekyll-lava-boilerplate" target="_blank">Github Project Repo</a> or you could do a git clone.</p>
-    <div class="terminalCode">
-      git clone https://github.com/sricharankrishnan/jekyll-lava-boilerplate.git [your-project-name]
-    </div>
-    <div class="terminalCode">
-      cd ./your-new-jekyll-project-directory 
-    </div>
-    <p>Run the jekyll server and you should be able to see this exact same page on your localhost. If so then your installation can be considered successful.</p>
-    <div class="terminalCode">
-      jekyll serve 
-    </div>
-    <p>With the new version update made to the Gemfile, you can also opt to run the livereload feature during your development process that auto updates the browser rendering whenever you make changes to your files.</p>
-    <div class="terminalCode">
-      jekyll serve --livereload
-    </div>
-  </section>
-  <!--Installation and Download Ends Here-->
-
-  <!--Get Started With Lava Plate Boiler Starts Here-->
-  <section class="contentSection" id="section3">
-    <header>
-      <h3>Getting Started with this Boilerplate</h3>
-    </header>
+  <!--Get Started-->
+  <section class="contentSection">
+    <h2>Getting Started</h2>
+    <p>You'll need a couple of files to get started with this. Let's get cracking. Start off by downloading all the required assets from this <a href="" class="orange">Bundle Link</a> from the Github Project Repo.</p>
     <p>
-      Understanding this boiler plate is really simple. There are certain <em>variables</em> that are used in this boiler plate. Knowledge of jekyll in prior is important though
-      for you to be able to use this boiler plate. If you have downloaded this project and have things running, lets get started.
+      First, the <strong>Stylesheets</strong>. These stylesheets are required and help to provide the basic styling and animation flow for the plugin. 
+      The stylesheet is available as <b>Sass Files</b> and <b>Regular CSS</b> files.
     </p>
-    <p>Open the Layouts Directory in your project folder and open the default.html file with an editor of your choice.</p>
-    <p>The features sections that follow describes the various directories and sections in this boiler plate to help you with your development. The layouts directory is a good place to start. If you've seen the
-    documentation at Jekyllrb, then this should be easy to work with.</p>
-    <div class="terminalCode">
-      vim ./_layouts/default.html
+    <p>Choose to import the Sass file like below (just like any other sass file). The name of the Sass file is youtube-overlay.scss:</p>
+    <div class="code">
+      @import "./path/to/the/sass/file/youtube-overlay.scss";
+    </div>
+    <p>Or you can even do this with the traditional link tag like but with say the CSS File:</p>
+    <div class="code">
+<pre>
+<code>
+&lt;link href="/path/to/the/youtube-overlay.css" rel="stylesheet" type="text/css"/&gt;
+</code>
+</pre>
+    </div>
+    <p>Next, the <strong>Javascript file</strong>, this is named as <strong>youtube-overlay.js</strong>. Keep this in your respective directory, lets say
+    you include it in your web app like so:</p>
+    <div class="code">
+<pre>
+<code>
+&lt;script src="/path/to/the/youtube-overlay.js" type="text/javascript"/&gt;
+</code>
+</pre>
     </div>
   </section>
-  <!--Get Started With Lava Plate Boiler Ends Here-->
 
-  <!--Feature Section Starts Here-->
-  <section class="contentSection" id="section4">
-    <header>
-      <h3>Important Features</h3>
-    </header>
-    <p>Jekyll Lava Boiler Plate comes with some simple yet effective features that can assist you in your building process. These features 
-    are based on the documentation from the original <a href="https://jekyllrb.com/" target="_blank">Jekyll Website</a>. The features and ideas involved are:</p>
+  <!--The Code-->
+  <section class="contentSection">
+    <h2>The Code</h2>
+    <p>Once you've got the files, its time to write the required coded to activate this and play your youtube videos.</p>
+    <p>Lets imagine for a second that you have a <strong>Button</strong> element in your web app and you would expect a click event attached to 
+    that button to play the Youtube video</p>
+    <div class="code">
+<pre>
+<code>
+&lt;button class="someButtonClass" id="demoButton" data-videourl="some-youtube-url"&gt;Demo Button&lt;/button&gt;
+</code>
+</pre>
+    </div>
+    <p>The button element here as an example, will need to have its <strong>id attribute</strong>, the <strong>data-videourl attribute</strong>, which we will use like this along 
+    with a callback function. We would need to invoke the required constructor:</p>
+    <div class="code">
+<pre>
+<code>
+var buttonElement = $("#demoButton"),<br/>
+    idValue = "#" + buttonElement.attr("id"),<br/>
+    vurl = buttonElement.attr("data-videourl"),<br/>
+    requiredCallback = function(thisResponse) {<br/>
+      /* write your code */<br/>
+    };
+</code>
+</pre>
+    </div>
+    <p>Invoke the constructor like so and then use the deploment method as shown:</p>
+    <div class="code">
+<pre>
+<code>
+var demoBuild = new YoutubeOverlayModule({<br/>
+  sourceUrl: vurl,<br/>
+  triggerElement: idValue,<br/>
+  progressCallback: requiredCallback<br/>
+});<br/>
+demoBuild.activateDeployment();<br/>
+</code>
+</pre>
+    </div>
+  </section>
 
-    <!--This section below for listing out features is a great example of how we can use the ./_data directory to serve
-    data or any other information (including html code). This greatly helps in spending more time on content instead of
-    running through heaps of html code-->
-
-    {% assign featureFile = site.data.feature-list %}
-    {% for thisFeature in featureFile %}
-    <p class="featureP">
-      <span class="subHeading">{{ thisFeature.subHeading }}</span>
-      {% for thisDescription in thisFeature.description %}
-        <span class="description">{{ thisDescription.textData }}</span>
-      {% endfor %}
-      {% if thisFeature.featureList %}
-        <span class="featureLocation">
-        {% for featureTag in thisFeature.featureList %}
-          <span class="innerText">{{ featureTag.featureText }}</span>
-        {% endfor %}
-        </span>
-      {% endif %}
+  <!--Integration Complete-->
+  <section class="contentSection">
+    <h2>You're Done!</h2>
+    <p>
+      If you have been able to understand the above steps in integrating this plugin, you should be fine.
+      Go ahead and click the element like shown in the example by building your own DOM element and then watch the
+      youtube video play.
     </p>
-    {% endfor %}
   </section>
-  <!--Feature Section Ends Here-->
-  
-  <!--Web font loader details starts here-->
-  <section class="contentSection" id="section6">
-    <header>
-      <h3>Web Font Loader</h3>
-    </header>
-    <p>In the <b>./_layouts/default.html</b> file, you can see a section that has WebFonts.js and this font loader is responsible for loading the required fonts for this Boilerplate Project. If you would like to know
-    how this piece works, do checkout <a href="https://github.com/typekit/webfontloader" target="_blank">this github project</a>.</p>
-    <p>Otherwise, you could use the old fashion way of importing a Google Fonts API into your stylesheet or the HTML file and be on your way.</p>
-  </section>
-  <!--Web font loader details ends here-->
 
-  <!--Support This Project Starts Here-->
-  <section class="contentSection" id="section7">
-    <header>
-      <h3>Support This Project With A Star</h3>
-    </header>
-    <p>Jekyll Lava Boiler Plate is a really simple project but built with good intent. Simply support this project with a star at the github repository and thats it. More improvements could be coming your way in the future.</p>
-    <p>Go to the github project repository by clicking <a href="https://github.com/sricharankrishnan/jekyll-lava-boilerplate" target="_blank">here</a>.</p>
+  <!--Demo Section-->
+  <section class="contentSection">
+    <h2>Here are some Demos</h2>
+    <p>
+      Almost any clickable element, even images or divs can be used with this plugin. Here are some images below, 
+      you can click on them and see how things work.
+    </p>
+    <div class="demoSection">
+      <div class="segment" id="demo1" data-videourl="https://www.youtube.com/embed/YNc4aZreqGs">
+        <img src="{{ relBase }}assets/images/demo-1.jpg" class="img-responsive center-block" alt="Demo 1" title="Demo 1"/>
+      </div>
+      <div class="segment" id="demo2" data-videourl="https://www.youtube.com/embed/a7J-OKXgFyc">
+        <img src="{{ relBase }}assets/images/demo-2.jpg" class="img-responsive center-block" alt="Demo 2" title="Demo 2"/>
+      </div>
+      <div class="segment" id="demo3" data-videourl="https://www.youtube.com/embed/sY1S34973zA">
+        <img src="{{ relBase }}assets/images/demo-3.jpg" class="img-responsive center-block" alt="Demo 3" title="Demo 3"/>
+      </div>
+    </div>
+    <p>
+      Perhaps if you are having a hard time understanding, you can inspect this demo showcase and get some ideas.
+      Happy Coding.
+    </p>
   </section>
-  <!--Support This Project Ends Here-->
+  
+  <!--Support-->
+  <section class="contentSection">
+    <h2>Support This Project</h2>
+    <p>
+      If you like this project, please help support it with a <span class="orange">Star</span> at the Github page. Link is available throught the Github Logo.
+    </p>
+  </section>
 </div>
+<!--Main Article and Content Ends Here-->

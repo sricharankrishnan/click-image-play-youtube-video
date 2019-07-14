@@ -1,6 +1,4 @@
-# jekyll-lava-boilerplate (Jekyll Version 3.8.5)
-A really simple project that serves as a boiler plate for developers building front end websites with Jekyll. Basic documentation available to help understand how this works.
-
-Please note that the main master branch also has documents pertaining to Code Of Conduct/Liscence etc.. Kindly have the needful done if these may not be applicable for your project.
-
-<a href="https://sricharankrishnan.github.io/jekyll-lava-boilerplate/" target="_blank">Documenation and Installation/Download Guide</a>
+# click-image-play-youtube-video [v3]
+A javascript/jquery plugin project that can help you play Youtube videos through an overlay. Really simple integration and code to write.
+Visit <a href="https://sricharankrishnan.github.io/click-image-play-youtube-video/">The Website</a> for more information on how this
+is done.
