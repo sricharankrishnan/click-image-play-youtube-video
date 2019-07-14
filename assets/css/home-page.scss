@@ -91,7 +91,7 @@
 @media only screen and (min-width: 768px) {
   .homePage {
     .jumbotronSection {
-			background: url("{{ relBase }}/assets/images/jumbo-bg.jpg") no-repeat center center;
+			background: url("../images/jumbo-bg.jpg") no-repeat center center;
 			background-size: cover;
       width: 50%;
       position: fixed;
