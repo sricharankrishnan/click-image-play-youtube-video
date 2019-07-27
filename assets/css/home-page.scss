@@ -88,8 +88,11 @@
 	}
 }
 .gadSection {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 728px;
+  margin: 30px auto;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.15);
 }
 @media only screen and (min-width: 768px) {
   .homePage {
