@@ -1,10 +1,137 @@
 @import "variables";
 
-.sampleFooterBar {
-  background: $black;
-  padding: 15px;
-  p {
-    color: $white;
-    margin: 0;
+.footerParent {
+  background: $thisGrey;
+  .posContainer {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    z-index: 10;
+    h2, p {
+      color: $white;
+    }
+    h2 {
+      margin-top: 0;
+      text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .buttonContainer {
+      .defaultButton {
+        margin: 0;
+        width: 49.5%;
+        float: left;
+      }
+      .defaultButton:first-child {
+        margin-right: 1%;
+        border-color: $red;
+        background: $red;
+      }
+      .defaultButton:last-child {
+        border-color: $white;
+      }
+    }
+  }
+}
+.footerParent:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.25);
+}
+.footerParent:before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+}
+.footerInfo {
+	background: $black;
+	padding: 30px 0;
+	.customRow {
+		.segment {
+			padding: 15px;
+			h3 {
+				margin-top: 0;
+				color: $red;
+				text-transform: none;
+				font-size: 1.4rem;
+			}
+			p {
+				margin-bottom: 0;
+				color: $white;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+  .footerParent {
+    .posContainer {
+      right: 0;
+      left: auto;
+    }
+    .bannerStrip {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 40%;
+			height: 100%;
+			z-index: 10;
+			background: $red;
+			opacity: 0.5;
+    }
+		.dotBanner {	
+			width: 350px;
+			height: 350px;
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			z-index: 11;
+			background: url(/assets/images/tiny-spec-white.png) repeat center center;
+			background-size: 26px;	
+		}
+  }
+  .footerParent:before {
+    padding-top: 50%;
+  }
+	.footerInfo {
+		.customRow {
+			.segment {
+				width: calc(100%/3);
+				float: left;
+			}
+		}		
+	}
+}
+@media only screen and (min-width: 992px) {
+	.footerParent {
+		.dotBanner {
+			width: 550px;
+		}
+	}	
+  .footerParent:before {
+    padding-top: 45%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+	.footerParent {
+		.posContainer {
+			right: calc(100% - 1200px);
+		}
+	}	
+  .footerParent:before {
+    padding-top: 30%;
   }
 }

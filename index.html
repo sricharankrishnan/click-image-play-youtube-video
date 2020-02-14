@@ -9,153 +9,81 @@ faviconImage: "./assets/icons/favicon.png"
 stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
-<!--Jumbotron section starts here-->
-<div class="jumbotronSection positionRelative">
+<!--jumbotron section starts here-->
+<div class="jumbotronSection" id="jumbotronSection"
+  data-mp4="/assets/videos/food-bg-video.mp4"
+  data-webm="/assets/videos/food-bg-video.webm"
+>
+  <div class="customRow positionRelative">
+    <span class="curtain"></span>
+    <span class="bannerStrip hidden-xs"></span>
+    <span class="dotBanner hidden-xs"></span>
+    <div class="posContainer">
+      <h1>Click Image Play Youtube Video</h1>
+      <p>A Jquery/Javascript plugin thats simple to integrate. Use this to play youtube videos in your web apps.</p>
+    </div>
+  </div>
+</div>
+<!--jumbotron section ends here-->
+
+<!--keep calm section-->
+<div class="keepCalmSection positionRelative" id="keepCalmSection">
   <div class="posContainer">
-    <h1>Click Image Play Youtube Video - V.3.0</h1>
-    <p>A Jquery/Javascript plugin thats simple to integrate. Use this to play youtube videos in your web app.</p>
-    <a href="#section1" class="defaultButton primaryOrange visible-xs" type="button" id="exploreButton">Get To Know More</a>
+    <h2>Keep Calm. <br/>Relax.</h2>
+    <p>All you've got to do is read the documentation, place the required files, write a bit of code
+    and you're done! Scroll down further to see a demo or head to the documentation.</p>
+    <a class="defaultButton primaryBlack" target="_blank"
+    href="https://github.com/sricharankrishnan/click-image-play-youtube-video/blob/master/README.md">Read The Docs</a>
   </div>
 </div>
-<!--Jumbotron section ends here-->
+<!--keep calm section-->
 
-<!--Main Article and Content Starts Here-->
-<div class="contentParent" id="section1">
-  <!--Intro-->
-  <section class="contentSection">
-    <h2>About This Plugin</h2>
-    <p>The goal is simple. Integrate some files into your webapp and use simple configuration methods to trigger YouTube Video frames playing its video.</p>
-    <p>Version 2, just like its predecessor, is Open Source and is free to be distributed and used in your projects and app. No strings attached.</p>
-  </section>
-
-  <!--Get Started-->
-  <section class="contentSection">
-    <h2>Getting Started</h2>
-    <p>You'll need a couple of files to get started with this. Let's get cracking. Start off by downloading all the required assets from this <a href="https://github.com/sricharankrishnan/click-image-play-youtube-video/tree/master/plugin-bundle-files" class="orange">Bundle Link</a> from the Github Project Repo.</p>
-    <p>
-      First, the <strong>Stylesheets</strong>. These stylesheets are required and help to provide the basic styling and animation flow for the plugin. 
-      The stylesheet is available as <b>Sass Files</b> and <b>Regular CSS</b> files.
-    </p>
-    <p>Choose to import the Sass file like below (just like any other sass file). The name of the Sass file is youtube-overlay.scss:</p>
-    <div class="code">
-      @import "./path/to/the/sass/file/youtube-overlay.scss";
+<!--demo section-->
+<div class="demoSectionParent positionRelative" id="demoSectionParent" data-hasloaded="false">
+  <div class="customRow">
+    <div class="segment">
+      <h2>Demo</h2>
+      <p>Here is a demo of what this plugin is all about. <br class="hidden-xs"/>Interact and click on an image to see a trailer playing.</p>
     </div>
-    <p>Or you can even do this with the traditional link tag like but with say the CSS File:</p>
-    <div class="code">
-<pre>
-<code>
-&lt;link href="/path/to/the/youtube-overlay.css" rel="stylesheet" type="text/css"/&gt;
-</code>
-</pre>
-    </div>
-    <p>Next, the <strong>Javascript file</strong>, this is named as <strong>youtube-overlay.js</strong>. Keep this in your respective directory, lets say
-    you include it in your web app like so:</p>
-    <div class="code">
-<pre>
-<code>
-&lt;script src="/path/to/the/youtube-overlay.js" type="text/javascript"/&gt;
-</code>
-</pre>
-    </div>
-  </section>
-
-  <!--The Code-->
-  <section class="contentSection">
-    <h2>The Code</h2>
-    <p>Once you've got the files, its time to write the required coded to activate this and play your youtube videos.</p>
-    <p>Lets imagine for a second that you have a <strong>Button</strong> element in your web app and you would expect a click event attached to 
-    that button to play the Youtube video</p>
-    <div class="code">
-<pre>
-<code>
-&lt;button class="someButtonClass" id="demoButton" data-videourl="some-youtube-url"&gt;Demo Button&lt;/button&gt;
-</code>
-</pre>
-    </div>
-    <p>The button element here as an example, will need to have its <strong>id attribute</strong>, the <strong>data-videourl attribute</strong>, which we will use like this along 
-    with a callback function. We would need to invoke the required constructor:</p>
-    <div class="code">
-<pre>
-<code>
-var buttonElement = $("#demoButton"),<br/>
-    idValue = "#" + buttonElement.attr("id"),<br/>
-    vurl = buttonElement.attr("data-videourl"),<br/>
-    requiredCallback = function(thisResponse) {<br/>
-      /* write your code */<br/>
-    };
-</code>
-</pre>
-    </div>
-    <p>Invoke the constructor like so and then use the deploment method as shown:</p>
-    <div class="code">
-<pre>
-<code>
-var demoBuild = new YoutubeOverlayModule({<br/>
-  sourceUrl: vurl,<br/>
-  triggerElement: idValue,<br/>
-  progressCallback: requiredCallback<br/>
-});<br/>
-demoBuild.activateDeployment();<br/>
-</code>
-</pre>
-    </div>
-  </section>
-
-  <!--Integration Complete-->
-  <section class="contentSection">
-    <h2>You're Done!</h2>
-    <p>
-      If you have been able to understand the above steps in integrating this plugin, you should be fine.
-      Go ahead and click the element like shown in the example by building your own DOM element and then watch the
-      youtube video play.
-    </p>
-  </section>
-
-  <!--Demo Section-->
-  <section class="contentSection">
-    <h2>Here are some Demos</h2>
-    <p>
-      Almost any clickable element, even images or divs can be used with this plugin. Here are some images below, 
-      you can click on them and see how things work.
-    </p>
-    <div class="demoSection">
-      <div class="segment" id="demo1" data-videourl="https://www.youtube.com/embed/YNc4aZreqGs">
-        <img src="{{ relBase }}assets/images/demo-1.jpg" class="img-responsive center-block" alt="Demo 1" title="Demo 1"/>
-      </div>
-      <div class="segment" id="demo2" data-videourl="https://www.youtube.com/embed/a7J-OKXgFyc">
-        <img src="{{ relBase }}assets/images/demo-2.jpg" class="img-responsive center-block" alt="Demo 2" title="Demo 2"/>
-      </div>
-      <div class="segment" id="demo3" data-videourl="https://www.youtube.com/embed/sY1S34973zA">
-        <img src="{{ relBase }}assets/images/demo-3.jpg" class="img-responsive center-block" alt="Demo 3" title="Demo 3"/>
+    <div class="segment">
+      <div class="carouselContainer owl-carousel owl-theme" id="demoCarousel">
+        <div class="carouselItem isLoading"
+          data-img="/assets/images/poster-1.jpg"
+          data-imgname="Movie Poster 1"
+          data-videourl="https://www.youtube.com/embed/TQfATDZY5Y4"
+        >
+          <div class="borderBoxContainer"></div>
+        </div>
+        <div class="carouselItem isLoading"
+          data-img="/assets/images/poster-2.jpg"
+          data-imgname="Movie Poster 2"
+          data-videourl="https://www.youtube.com/embed/GOQMXNwp8wo"
+        >
+          <div class="borderBoxContainer"></div>
+        </div>
+        <div class="carouselItem isLoading"
+          data-img="/assets/images/poster-3.jpg"
+          data-imgname="Movie Poster 3"
+          data-videourl="https://www.youtube.com/embed/T6DJcgm3wNY"
+        >
+          <div class="borderBoxContainer"></div>
+        </div>
+        <div class="carouselItem isLoading"
+          data-img="/assets/images/poster-4.jpg"
+          data-imgname="Movie Poster 4"
+          data-videourl="https://www.youtube.com/embed/u9Mv98Gr5pY"
+        >
+          <div class="borderBoxContainer"></div>
+        </div>
+        <div class="carouselItem isLoading"
+          data-img="/assets/images/poster-5.jpg"
+          data-imgname="Movie Poster 5"
+          data-videourl="https://www.youtube.com/embed/1Q8fG0TtVAY"
+        >
+          <div class="borderBoxContainer"></div>
+        </div>
       </div>
     </div>
-    <p>
-      Perhaps if you are having a hard time understanding, you can inspect this demo showcase and get some ideas.
-      Happy Coding.
-    </p>
-  </section>
-  
-  <!--Support-->
-  <section class="contentSection">
-    <h2>Support This Project</h2>
-    <p>
-      If you like this project, please help support it with a <span class="orange">Star</span> at the Github page. Link is available throught the Github Logo.
-    </p>
-  </section>
-
-  <!--Ad Section-->
-  <div class="gadSection">
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Gh Page Ads -->
-		<ins class="adsbygoogle"
-				 style="display:block"
-				 data-ad-client="ca-pub-7129312127229999"
-				 data-ad-slot="4028246948"
-				 data-ad-format="auto"
-				 data-full-width-responsive="true"></ins>
-		<script>
-				 (adsbygoogle = window.adsbygoogle || []).push({});
-		</script>
   </div>
 </div>
-<!--Main Article and Content Ends Here-->
+<!--demo section-->

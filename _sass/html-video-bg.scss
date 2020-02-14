@@ -1,0 +1,24 @@
+/* this file will help create the neccessary styles for the video
+   parent that is dynamically loaded by js */
+
+.videoParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.videoParent.hiddenTransform {
+  opacity: 0;
+}
