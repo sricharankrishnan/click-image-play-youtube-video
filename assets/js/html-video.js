@@ -1,6 +1,3 @@
-/* this javascript file helps to dynamcically build a html video
-   background for a particular element. has specific css requirements to work */
-
 /* this function helps to build html video dynamically in the document 
   when the user is in the view of the respective html section */
 function buildHtmlVideo(configObject) {
@@ -41,13 +38,17 @@ function buildHtmlVideo(configObject) {
         " - requires property/field playInDesktop to be of Boolean Type"
       );
       return;
-    } else if (typeof configObject.fallbackImage !== "string") {
+    } else if ("fallback" in configObject && typeof configObject.fallbackImage !== "string") {
       throw new Error(
         " - requires property/field fallbackImage to be of String Type."
       );
       return;
+    } else if ("callback" in configObject && typeof configObject.callback !== "function") {
+      throw new Error(" - if callback option given, it must be of Function Type. Please check.");
+      return;
     } else {
       var pe = configObject.parentElement;
+      var thisCallback = configObject.callback;
 
       function checkIE() {
         var undef,
@@ -82,13 +83,13 @@ function buildHtmlVideo(configObject) {
         configObject.playInDesktop === false
       ) {
         var bgurl = configObject.fallbackImage;
-        buildHtmlVideo.buildBgPicture(pe, bgurl);
+        buildHtmlVideo.buildBgPicture(pe, bgurl, thisCallback);
       } else if (isIE === true) {
         var bgurl = configObject.fallbackImage;
-        buildHtmlVideo.buildBgPicture(pe, bgurl);
+        buildHtmlVideo.buildBgPicture(pe, bgurl, thisCallback);
       } else if (mp4Status === false && webmStatus === false) {
         var bgurl = configObject.fallbackImage;
-        buildHtmlVideo.buildBgPicture(pe, bgurl);
+        buildHtmlVideo.buildBgPicture(pe, bgurl, thisCallback);
       } else if (mp4Status === true) {
         buildHtmlVideo.checkDeviceWidth(configObject, "mp4");
       } else {
@@ -101,7 +102,7 @@ function buildHtmlVideo(configObject) {
   }
 }
 /* templates the requires video element with the url and parent element */
-buildHtmlVideo.checkDeviceWidth = function(configObject, vt) {
+buildHtmlVideo.checkDeviceWidth = function(configObject, vt, callback) {
   var w = $(window),
     vurl =
       vt === "mp4"
@@ -112,12 +113,13 @@ buildHtmlVideo.checkDeviceWidth = function(configObject, vt) {
     pe = configObject.parentElement;
 
   if ($(w).innerWidth() <= 767 && configObject.playInMobile === true) {
-    buildHtmlVideo.templateElements(pe, vurl);
+    buildHtmlVideo.templateElements(pe, vurl, callback);
   }
   if ($(w).innerWidth() <= 767 && configObject.playInMobile === false) {
     buildHtmlVideo.buildBgPicture(
       configObject.parentElement,
-      configObject.fallbackImage
+      configObject.fallbackImage,
+      callback
     );
   }
 
@@ -126,7 +128,7 @@ buildHtmlVideo.checkDeviceWidth = function(configObject, vt) {
     $(w).innerWidth() <= 1199 &&
     configObject.playInTablet === true
   ) {
-    buildHtmlVideo.templateElements(pe, vurl);
+    buildHtmlVideo.templateElements(pe, vurl, callback);
   }
   if (
     $(w).innerWidth() >= 768 &&
@@ -135,22 +137,24 @@ buildHtmlVideo.checkDeviceWidth = function(configObject, vt) {
   ) {
     buildHtmlVideo.buildBgPicture(
       configObject.parentElement,
-      configObject.fallbackImage
+      configObject.fallbackImage,
+      callback
     );
   }
 
   if ($(w).innerWidth() >= 1200 && configObject.playInDesktop === true) {
-    buildHtmlVideo.templateElements(pe, vurl);
+    buildHtmlVideo.templateElements(pe, vurl, callback);
   }
   if ($(w).innerWidth() >= 1200 && configObject.playInDesktop === false) {
     buildHtmlVideo.buildBgPicture(
       configObject.parentElement,
-      configObject.fallbackImage
+      configObject.fallbackImage,
+      callback
     );
   }
 };
 /* builds the required html5 video elements */
-buildHtmlVideo.templateElements = function(pe, vurl) {
+buildHtmlVideo.templateElements = function(pe, vurl, callback) {
   var videoParent = $('<div class="videoParent"></div>'),
     videoTag = $(
       '<video style="opacity:0.98;" autoplay loop muted playsinline></video>'
@@ -160,11 +164,22 @@ buildHtmlVideo.templateElements = function(pe, vurl) {
   videoTag.appendTo(videoParent);
   videoParent.appendTo(pe);
   pe.find(".videoParent").removeClass("hiddenTransform");
+
+  /* incase we have the callback supplied here */
+  if(typeof callback === "function") {
+    callback();
+  }
 };
 /* templates the background image for the parent element */
-buildHtmlVideo.buildBgPicture = function(pe, bgurl) {
-  pe.css({
-    background: "url(" + bgurl + ") no-repeat center center",
-    "background-size": "cover"
-  });
+buildHtmlVideo.buildBgPicture = function(pe, bgurl, callback) {
+  if(bgurl) {
+    pe.css({
+      background: "url(" + bgurl + ") no-repeat center center",
+      "background-size": "cover"
+    });
+  }
+  /* incase we have the callback supplied here */
+  if(typeof callback === "function") {
+    callback();
+  }
 };
