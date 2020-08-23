@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Click Image Play Youtube Video - Version 3| Simple Jquery Plugin (Open Source)"
-metaDescription: A Simple Tutorial/Plugin that would help you understand and build UI that plays embed styled youtube videos. Demos included as well.
+metaDescription: A Simple JQuery Plugin that would help you build UI for playing and displaying YouTube Videos on your Web Application. Demos included as well.
 metaKeywords: "click image play youtube video, jquery click image play youtube video, jquery click image to play video, click image to play video, jquery plugin for youtube videos, javascript plugin for youtube videos"
 permalink: "/"
 bodyClass: homePage
@@ -9,80 +9,57 @@ faviconImage: "./assets/icons/favicon.png"
 stylesheet: "home-page.css"
 jsfile: "main.js"
 ---
-<!--jumbotron section starts here-->
-<div class="jumbotronSection" id="jumbotronSection"
-  data-mp4="{{ relBase }}assets/videos/food-bg-video.mp4"
-  data-webm="{{ relBase }}assets/videos/food-bg-video.webm"
->
-  <div class="customRow positionRelative">
-    <span class="curtain"></span>
-    <span class="bannerStrip hidden-xs"></span>
-    <span class="dotBanner hidden-xs"></span>
-    <div class="posContainer">
-      <h1>Click Image Play Youtube Video</h1>
-      <p>A Jquery/Javascript plugin thats simple to integrate. Use this to play youtube videos in your web apps.</p>
-    </div>
-  </div>
-</div>
-<!--jumbotron section ends here-->
-
-<!--keep calm section-->
-<div class="keepCalmSection positionRelative" id="keepCalmSection">
+<!--jumbotron section-->
+<div class="jumbotronSection positionRelative">
   <div class="posContainer">
-    <h2>Keep Calm. <br/>Relax.</h2>
-    <p>All you've got to do is read the documentation, place the required files, write a bit of code
-    and you're done! Scroll down further to see a demo or head to the documentation.</p>
-    <a class="defaultButton primaryBlack" target="_blank"
-    href="https://github.com/sricharankrishnan/click-image-play-youtube-video/blob/master/README.md">Read The Docs</a>
+    <span class="smallText">A Free and Simple Jquery Plugin</span>
+    <hr>
+    <span class="smallText">No Complications // No Fuss</span>
+    <h1>Deep Breath. Easy To Install and Handle.</h1>
+    <hr>
+    <span class="smallText">Play Youtube Videos</span>
+    <p>Click Image Play Youtube Video is a really simple Jquery Plugin that you can use to play Youtube Videos on your WebApps. Absolutely Easy to Integrate</p>
+    <hr>
+    <span class="smallText">Can't Wait? // Get Started Right Now!</span>
+  </div>
+  <div class="segment hidden-xs" data-video="https://www.youtube.com/embed/sY1S34973zA" id="jumbotronTrigger">
+    <img src="/assets/images/jumbotron-image.jpg" class="img-responsive center-block jumboimg" alt="The Godfather" title="The Godfather"/>
   </div>
 </div>
-<!--keep calm section-->
+<!--jumbotron section-->
 
 <!--demo section-->
-<div class="demoSectionParent positionRelative" id="demoSectionParent" data-hasloaded="false">
-  <div class="customRow">
-    <div class="segment">
-      <h2>Demo</h2>
-      <p>Here is a demo of what this plugin is all about. <br class="hidden-xs"/>Interact and click on an image to see a trailer playing.</p>
+<div class="demoSection" id="demoSectionParent">
+  <div class="demoCarousel owl-carousel owl-theme" id="demoCarousel">
+    <div class="carouselItem" data-video="https://www.youtube.com/embed/OkzO2fk6NUs">
+      <img src="/assets/images/poster-5.jpg" class="img-responsive center-block" alt="lamborghini" title="lamborghini"/>
+      <span class="smallText">Luxury // Sports Cars</span>
+      <span class="heading">Lamborghini (Automobili <br/>Lamborghini S.p.A)</span>
+      <button class="defaultButton secondaryBlack playBtn" type="button"><span>Play Video</span></button>
     </div>
-    <div class="segment">
-      <div class="carouselContainer owl-carousel owl-theme" id="demoCarousel">
-        <div class="carouselItem isLoading"
-          data-img="{{ relBase }}assets/images/poster-1.jpg"
-          data-imgname="Movie Poster 1"
-          data-videourl="https://www.youtube.com/embed/TQfATDZY5Y4"
-        >
-          <div class="borderBoxContainer"></div>
-        </div>
-        <div class="carouselItem isLoading"
-          data-img="{{ relBase }}assets/images/poster-2.jpg"
-          data-imgname="Movie Poster 2"
-          data-videourl="https://www.youtube.com/embed/GOQMXNwp8wo"
-        >
-          <div class="borderBoxContainer"></div>
-        </div>
-        <div class="carouselItem isLoading"
-          data-img="{{ relBase }}assets/images/poster-3.jpg"
-          data-imgname="Movie Poster 3"
-          data-videourl="https://www.youtube.com/embed/T6DJcgm3wNY"
-        >
-          <div class="borderBoxContainer"></div>
-        </div>
-        <div class="carouselItem isLoading"
-          data-img="{{ relBase }}assets/images/poster-4.jpg"
-          data-imgname="Movie Poster 4"
-          data-videourl="https://www.youtube.com/embed/u9Mv98Gr5pY"
-        >
-          <div class="borderBoxContainer"></div>
-        </div>
-        <div class="carouselItem isLoading"
-          data-img="{{ relBase }}assets/images/poster-5.jpg"
-          data-imgname="Movie Poster 5"
-          data-videourl="https://www.youtube.com/embed/1Q8fG0TtVAY"
-        >
-          <div class="borderBoxContainer"></div>
-        </div>
-      </div>
+    <div class="carouselItem" data-video="https://www.youtube.com/embed/gN8geCTlZOo">
+      <img src="/assets/images/poster-1.jpg" class="img-responsive center-block" alt="Dawn of War 3" title="Dawn of War 3"/>
+      <span class="smallText">PC Games // Strategy</span>
+      <span class="heading">Warhammer 40k: <br/>Dawn of War 3</span>
+      <button class="defaultButton secondaryBlack playBtn" type="button"><span>Play Video</span></button>
+    </div>
+    <div class="carouselItem" data-video="https://www.youtube.com/embed/i58vKQ4vZeU">
+      <img src="/assets/images/poster-2.jpg" class="img-responsive center-block" alt="Bianchi" title="Bianchi"/>
+      <span class="smallText">Cycling // Italian</span>
+      <span class="heading">Bianchi (F.I.V. Edoardo <br/>Bianchi S.p.A)</span>
+      <button class="defaultButton secondaryBlack playBtn" type="button"><span>Play Video</span></button>
+    </div>
+    <div class="carouselItem" data-video="https://www.youtube.com/embed/g8evyE9TuYk">
+      <img src="/assets/images/poster-3.jpg" class="img-responsive center-block" alt="Batman - The Dark Knight" title="Batman - The Dark Knight"/>
+      <span class="smallText">Movie // Action Adventure</span>
+      <span class="heading">The Dark Knight <br/>Rises</span>
+      <button class="defaultButton secondaryBlack playBtn" type="button"><span>Play Video</span></button>
+    </div>
+    <div class="carouselItem" data-video="https://www.youtube.com/watch?v=HL9kaJZw8iw">
+      <img src="/assets/images/poster-4.jpg" class="img-responsive center-block" alt="Lamb of God" title="Lamb of God"/>
+      <span class="smallText">Music // Metal</span>
+      <span class="heading">Lamb of <br/>God</span>
+      <button class="defaultButton secondaryBlack playBtn" type="button"><span>Play Video</span></button>
     </div>
   </div>
 </div>

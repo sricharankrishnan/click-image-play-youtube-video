@@ -1,47 +1,4 @@
 (function($mainRoot, w, d) {
-  function initDemoVideos() {
-    var trig1 = $("#demo1"),
-        trig2 = $("#demo2"),
-        trig3 = $("#demo3");
-
-    trig1Id = "#" + trig1.attr("id");
-    trig2Id = "#" + trig2.attr("id");
-    trig3Id = "#" + trig3.attr("id");
-
-    /* Demo 1 Segment */
-    var buildOne = new YoutubeOverlayModule({
-      sourceUrl: trig1.attr("data-videourl"),
-      triggerElement: trig1Id,
-      progressCallback: function(thisResponse) {
-        console.log("Trigger 1 Response");
-        console.log(thisResponse);
-      }
-    });
-    buildOne.activateDeployment();
-
-    /* Demo 2 Segment */
-    var buildTwo = new YoutubeOverlayModule({
-      sourceUrl: trig2.attr("data-videourl"),
-      triggerElement: trig2Id,
-      progressCallback: function(thisResponse) {
-        console.log("Trigger 2 Response");
-        console.log(thisResponse);
-      }
-    });
-    buildOne.activateDeployment();
-
-    /* Demo 3 Segment */
-    var buildThree = new YoutubeOverlayModule({
-      sourceUrl: trig3.attr("data-videourl"),
-      triggerElement: trig3Id,
-      progressCallback: function(thisResponse) {
-        console.log("Trigger 3 Response");
-        console.log(thisResponse);
-      }
-    });
-    buildThree.activateDeployment();
-  }
-
 	function smoothScroll() {
     var smoothScrollArray = ["#exploreButton"];
     $.each(smoothScrollArray, function(index, element) {
@@ -93,18 +50,15 @@
 
   /* helps to build the required elements for the jumbotron section */
   function jumbotronInit() {
-    var pe = $mainRoot.find("#jumbotronSection");
-    var insertElement = pe.find(".customRow"); 
-    var configObject = {
-      webmVideo: pe.attr("data-webm"),
-      mp4Video: pe.attr("data-mp4"),
-      parentElement: insertElement,
-      playInMobile: true,
-      playInTablet: true,
-      playInDesktop: true,
-      fallbackImage: ""
-    };
-    buildHtmlVideo(configObject);
+    var thisitem = $mainRoot.find("#jumbotronTrigger");
+    var thisitemBuild = new YoutubeOverlayModule({
+      sourceUrl: thisitem.attr("data-video"),
+      triggerElement: "#" + thisitem.attr("id"),
+      progressCallback: function() {
+        console.log("Item activated");
+      }
+    });
+    thisitemBuild.activateDeployment();
   }
 
   /* helps control the demo section for the page */
@@ -115,7 +69,7 @@
       loop: true,
       rewind: true,
       nav: false,
-      dots: true,
+      dots: false,
       responsive: {
         0: {
           items: 1,
@@ -130,56 +84,16 @@
           stagePadding: 20
         },
         1200: {
-          loop: false,
-          items: 5,
-          stagePadding: 20
+          items: 3,
+          stagePadding: 20,
+          dots: true
         }
       }
     };
 
     cp.owlCarousel(cpConfig);
-
-    checkWindowScrollPosition(pe, function() {
-      pe.attr("data-hasloaded", "true");
-      demoSectionInit.loadCarouselImages.call(cp);
-      demoSectionInit.loadVideoPlayer.call(cp);
-    });
+    demoSectionInit.loadVideoPlayer.call(cp);
   }
-  /* loads carousel images */
-  demoSectionInit.loadCarouselImages = function() {
-    var $this = this;
-    var items = $this.find(".carouselItem");
-    var len = items.length;
-    var counter = 0;
-
-    function startImageLoad() {
-      var thisitem = items.eq(counter);
-      var imgsrc = thisitem.attr("data-img");
-      var imgname = thisitem.attr("data-imgname");
-      var img = $('<img class="img-responsive center-block"/>');
-
-      img.attr({
-        "title": imgname,
-        "alt": imgname,
-        "src": imgsrc
-      })
-      .on("load", function() {
-        thisitem.removeClass("isLoading").find(".borderBoxContainer").append(img);
-        nextIteration();
-      })
-      .on("error", function() {
-        nextIteration();
-      });
-
-      function nextIteration() {
-        ++counter;
-        if(counter < len) {
-          setTimeout(startImageLoad, 60);
-        }
-      }
-    }
-    startImageLoad();
-  };
   /* loads the youtube js overlay */
   demoSectionInit.loadVideoPlayer = function() {
     var $this = this;
@@ -193,7 +107,7 @@
     citems.each(function(index, thisitem) {
       var thisitem = $(thisitem);
       var thisitemBuild = new YoutubeOverlayModule({
-        sourceUrl: thisitem.attr("data-videourl"),
+        sourceUrl: thisitem.attr("data-video"),
         triggerElement: "#" + thisitem.attr("id"),
         progressCallback: function() {
           console.log("Item activated");
@@ -207,14 +121,13 @@
   function footerSectionInit() {
     var pe = $("#appFooterParent");
 
-    console.log(pe);
     checkWindowScrollPosition(pe, function() {
       pe.attr("data-hasloaded", "true");
       var configObject = {
         webmVideo: pe.attr("data-webm"),
         mp4Video: pe.attr("data-mp4"),
         parentElement: pe,
-        playInMobile: true,
+        playInMobile: false,
         playInTablet: true,
         playInDesktop: true,
         fallbackImage: ""
@@ -224,7 +137,6 @@
   }
 
   function centralController() {
-    //initDemoVideos();
 		smoothScroll();
     jumbotronInit();
     demoSectionInit();

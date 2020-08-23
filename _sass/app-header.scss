@@ -1,10 +1,17 @@
 @import "variables";
 
-.sampleNavBar {
+.appHeader {
   background: $black;
   padding: 15px;
-  p {
-    color: $white;
-    margin: 0;
+  color: $white;
+  font-size: 1.3rem;
+  .borderBoxContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    img {
+      display: inline-block;
+      width: 23px;
+      margin-right: 8px;
+    }
   }
 }
