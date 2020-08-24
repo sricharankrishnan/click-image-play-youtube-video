@@ -15,6 +15,7 @@
         font-size: 1.0rem;
         text-transform: uppercase;
         display: block;
+        color: #777;
       }
       hr {
         margin-top: 10px;
@@ -29,7 +30,6 @@
         margin-top: 30px;
         line-height: 24px;
         font-weight: 300;
-        color: #222;
       }
     }
   }
@@ -90,13 +90,9 @@
       }
     }
   }
-  .gadSection {
+  .gadSpace {
     padding: 15px;
-    background: $black;
-    .borderBoxContainer {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    background: #fafafa;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -115,6 +111,9 @@
         right: 5%;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
+        .jumboimg {
+          margin-bottom: 10px;
+        }
       }
     }
   }
