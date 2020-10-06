@@ -59,8 +59,8 @@ files, lets get to work with code.
 7.  You're all set and good to go! Refresh your browser and see this working. If you've been able to understand things, I'm sure you can build different patterns that suit different scenarios. 
     If you click on the example image that you've inserted following this documentation, things should be working fine.
 
-##  Support This Project
-You really don't need to do so much. If you like this project, I would really appreciate you placing a star on the github project. This would really help encourage me to become a better developer.
+##  Support This Project with a Github Star
+If you like this project, I would really appreciate you placing a star on the github project. This would really help encourage me to become a better developer.
 Speak to your friends and colleagues about this project too if you can and seek their support.
 
 Here is wishing you a nice day and happy coding. Cheers!
