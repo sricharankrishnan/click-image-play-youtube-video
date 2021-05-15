@@ -50,6 +50,11 @@
 	 -o-transition-timing-function: ease-in-out;
 	 -ms-transition-timing-function: ease-in-out;
 	 -moz-transition-timing-function: ease-in-out;
+    display: flex;
+}
+.videoPlayerOverlay .closeIcon img {
+  width: 100%;
+  height: auto;
 }
  .videoPlayerOverlay iframe {
 	 max-width: 853px;

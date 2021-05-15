@@ -46,6 +46,11 @@ $grey: rgba(0, 0, 0, 0.5);
     width: 30px;
     height: 30px;
     @include transition(transform, 0.25s, ease-in-out);
+    display: flex;
+    img  {
+      width: 100%;
+      height: auto;
+    }
   }
 	iframe {
 		max-width: 853px;
