@@ -60,7 +60,7 @@ files, lets get to work with code.
     If you click on the example image that you've inserted following this documentation, things should be working fine.
 
 ##  Raising Issues for the Project
-This isn't some superhero project but as of May 2021, its nice to see some small time appreciate and support coming in. If you do have any issues 
+I don't consider this a superhero project but as of May 2021, its nice to see some appreciation and support coming in. If you do have any issues 
 I'd definetly try to see what I can do help support. Please go ahead and raise a good ol' Github issue and would write back to you depending upon 
 how it could be resolved.
 
