@@ -1,5 +1,5 @@
 # Click-Image-Play-Youtube-Video
-![Status](https://img.shields.io/github/checks-status/sricharankrishnan/click-image-play-youtube-video/master)
+![Version](https://img.shields.io/github/v/release/sricharankrishnan/click-image-play-youtube-video?sort=semver)
 ![Open Issues](https://img.shields.io/github/issues-raw/sricharankrishnan/click-image-play-youtube-video)
 ![Closed Issues](https://img.shields.io/github/issues-closed-raw/sricharankrishnan/click-image-play-youtube-video)
 ![License](https://img.shields.io/github/license/sricharankrishnan/click-image-play-youtube-video)
