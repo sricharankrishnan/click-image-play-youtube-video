@@ -13,6 +13,10 @@ event can be bound to all clickable HTML elements and is not restricted to image
 If you would like to see a Demo or visit the Webiste, <a href="https://sricharankrishnan.github.io/click-image-play-youtube-video/">click here</a>.
 Otherwise, lets get you started on the installations and downloads.<br/><br/>
 
+### Discussions
+A discussions channel has been opened up for this plugin. If you have any questions about this particular plugin, do feel free to write in and I would do my best to help you out. You can access the discussions page by clicking on the 'Discussion' tab above or go to <https://github.com/sricharankrishnan/click-image-play-youtube-video/discussions>
+<br/><br/>
+
 ### Getting Started
 Before you start coding, download the required files. <a href="https://github.com/sricharankrishnan/click-image-play-youtube-video/tree/master/plugin-bundle-files">Click here</a> 
 to proceed to the section for downloading. The javascript file `youtube-overlay.js` is required. When it comes to stylesheets, you can either download the 
