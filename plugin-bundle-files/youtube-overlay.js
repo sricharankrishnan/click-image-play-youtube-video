@@ -1,8 +1,18 @@
-/*
-   This is the Javascript module that helps to build and play the required Iframes from Youtube
-   Its a javascript constructor that is being called with 3 required argument.
-   Read the implementation documents for more information.
-*/
+/**
+  * Plugin Name:  Click Image Play YouTube Video
+  * Plugin URI:   https://github.com/sricharankrishnan/click-image-play-youtube-video
+  * Description:  Click Image Play YouTube Video is a Jquery based plugin, designed to be integrated into your web app on the 
+                  client side. It provides a simple yet effective user interface (in the form of an overlay), to help play 
+                  youtube embeded videos based on a click event.
+  * Requirements: Jquery version 3 upwards, CSS, Sass (only if you are using this in the pre compile phase)
+  * Author:       Sricharan Krishnan | sricharan.krishnan@gmail.com
+  * Author URI:   https://github.com/sricharankrishnan
+  **/
+
+/**
+  * Please read the integration directions given for clarity
+  **/
+
 (function (moduleFunc) {
   try {
     if(typeof define === "function" && !!define.amd) {
@@ -181,6 +191,17 @@
       }
     });
   };
+  /* you can close this module overlay if the user clicks outside the iframe space */
+  cpo.closeOnClickingOverlay = function() {
+    var $this = this;
+    var overlay = $($this.overlayContainer);
+    /* handler */
+    overlay.on("click", function(event) {
+      if (event.target.tagName.toLowerCase() !== "iframe" && event.target.id === "youtubePlayerOverlay") {
+        overlay.find("#youtubeOverlayCloser").trigger("click");
+      }
+    });
+  }
 
   return YtConst;
 });

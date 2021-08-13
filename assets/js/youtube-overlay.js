@@ -159,6 +159,7 @@
 
       /* initialize escape key press event */
       $this.closeOnEscapeKeyPress();
+      $this.closeOnClickingOverlay();
     }
   };
   /* closes the modal overlay and stop the video from playing */
@@ -181,6 +182,17 @@
       }
     });
   };
+  /* you can close this module overlay if the user clicks outside the iframe space */
+  cpo.closeOnClickingOverlay = function() {
+    var $this = this;
+    var overlay = $($this.overlayContainer);
+    /* handler */
+    overlay.on("click", function(event) {
+      if (event.target.tagName.toLowerCase() !== "iframe" && event.target.id === "youtubePlayerOverlay") {
+        overlay.find("#youtubeOverlayCloser").trigger("click");
+      }
+    });
+  }
 
   return YtConst;
 });
