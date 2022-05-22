@@ -3,6 +3,7 @@
 ![Open Issues](https://img.shields.io/github/issues-raw/sricharankrishnan/click-image-play-youtube-video)
 ![Closed Issues](https://img.shields.io/github/issues-closed-raw/sricharankrishnan/click-image-play-youtube-video)
 ![License](https://img.shields.io/github/license/sricharankrishnan/click-image-play-youtube-video)
+![Maintenance](https://img.shields.io/maintenance/yes/2022)
 <br/>
 <br/>
 ### About
