@@ -14,15 +14,7 @@
     }
     .buttonContainer {
       .defaultButton {
-        margin: 0;
-        width: 49.5%;
-        float: left;
-        border-radius: 0;
-      }
-      .defaultButton:first-child {
-        margin-right: 1%;
-        border-color: $red;
-        background: $red;
+        width: 100%;
       }
     }
   }
@@ -55,6 +47,17 @@
     margin: 0 auto;
     .posContainer {
       max-width: 50%;
+      .buttonContainer {
+        .defaultButton.secondaryBlack {
+          margin: 0;
+          width: 49.5%;
+          float: left;
+          border-radius: 0;
+        }
+        .defaultButton.last {
+          margin-left: 1%;
+        }
+      }
     }
     .videoParent {
 			width: 40%;
@@ -75,11 +78,11 @@
 			.segment.two, .segment.three {
 				width: 45%;
 				float: left;
-			}			
-			.segment.two {	
+			}
+			.segment.two {
 				margin-right: 5%;
 			}
-		}		
+		}
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -94,7 +97,7 @@
 		.videoParent {
 			width: 50%;
 		}
-	}	
+	}
 	.footerInfo {
 		.customRow {
 			.segment.one,
@@ -106,9 +109,9 @@
 			.segment.one {
 				margin-bottom: 0;
 			}
-			.segment.two {	
+			.segment.two {
 				margin-right: 0;
 			}
-		}		
+		}
 	}
 }

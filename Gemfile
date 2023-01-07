@@ -28,3 +28,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Bootstrap 3 For Sass Installation
 gem "boostrap-sass"
 gem "sassc-rails"
+gem "webrick"
+gem 'rexml', '~> 3.2', '>= 3.2.4'
