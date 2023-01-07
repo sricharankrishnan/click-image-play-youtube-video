@@ -1,6 +1,5 @@
 # Bundle Files
-Hello. You have reached this page from the website. Please download the required files to your project directory. Please head back to the
-website so that you can understand how the integration is done. The link to the website is <a href="https://sricharankrishnan.github.io/click-image-play-youtube-video/">this link</a>.
+Hello. You have reached this page from the website. Please download the required files to your project directory. Please head to the documentation for this plugin by <a href="https://github.com/sricharankrishnan/click-image-play-youtube-video/blob/master/README.md">clicking here</a>.
 
 Have a nice day.
 
