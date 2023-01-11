@@ -3,7 +3,7 @@
 ![Open Issues](https://img.shields.io/github/issues-raw/sricharankrishnan/click-image-play-youtube-video)
 ![Closed Issues](https://img.shields.io/github/issues-closed-raw/sricharankrishnan/click-image-play-youtube-video)
 ![License](https://img.shields.io/github/license/sricharankrishnan/click-image-play-youtube-video)
-![Maintenance](https://img.shields.io/maintenance/yes/2022)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
 <br/>
 <br/>
 ### About
@@ -12,7 +12,9 @@ simple yet effect user interface, in the form of an overlay, to help play youtub
 event can be bound to all clickable HTML elements and is not restricted to images.
 
 If you would like to see a Demo or visit the Webiste, <a href="https://sricharankrishnan.github.io/click-image-play-youtube-video/">click here</a>.
-Otherwise, lets get you started on the installations and downloads.<br/><br/>
+Otherwise, lets get you started on the installations and downloads.
+
+Are you looking to support projects built with React? <a href="https://github.com/sricharankrishnan/react-click-image-play-youtube-video">Click Here</a>.<br/><br/>
 
 ### Discussions
 A discussions channel has been opened up for this plugin. If you have any questions about this particular plugin, do feel free to write in and I would do my best to help you out. You can access the discussions page by clicking on the 'Discussion' tab above or go to <https://github.com/sricharankrishnan/click-image-play-youtube-video/discussions>
